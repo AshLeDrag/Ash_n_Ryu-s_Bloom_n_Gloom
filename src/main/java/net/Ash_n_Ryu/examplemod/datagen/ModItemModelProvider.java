@@ -1,8 +1,8 @@
 package net.Ash_n_Ryu.examplemod.datagen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.ModBlocks;
-import net.AshLeDrag.thingsfordays.item.ModItems;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.block.ModBlocks;
+import net.Ash_n_Ryu.examplemod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -22,7 +22,7 @@ import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
 		public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-				super(output, ThingsForDays.MOD_ID, existingFileHelper);
+				super(output, ExampleMod.MOD_ID, existingFileHelper);
 		}
 		
 		private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -42,19 +42,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 		@Override
 		protected void registerModels() {
 				// basicItem Items
-				basicItem(ModItems.Mana.Resource.PURE_MANA.get());
 				basicItem(ModItems.Foods.RADISH.get());
 				basicItem(ModItems.Fuels.STARLIGHT_ASHES.get());
-				basicItem(ModItems.Mana.Resource.MANA_ESSENCE.get());
-				basicItem(ModItems.Steel.Stainless.Resource.INGOT.get());
-				basicItem(ModItems.Steel.Resource.INGOT.get());
-				basicItem(ModItems.Steel.Stainless.Resource.BILLET.get());
-				basicItem(ModItems.Steel.Resource.BILLET.get());
 				basicItem(ModItems.Breadinium.Resource.RAW.get());
 				basicItem(ModItems.Breadinium.Resource.INGOT.get());
-				basicItem(ModItems.Chromium.Resource.RAW.get());
-				basicItem(ModItems.Chromium.Resource.INGOT.get());
-				basicItem(ModItems.Chromium.Resource.NUGGET.get());
 				basicItem(ModItems.Foods.RADISH_SEEDS.get());
 				
 				// handheldItem Items
@@ -67,10 +58,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 				handheldItem(ModItems.Breadinium.Tools.AXE_HAMMER);
 				handheldItem(ModItems.Breadinium.Tools.PICKAXE_HAMMER);
 				handheldItem(ModItems.Breadinium.Tools.SHOVEL_HAMMER);
-				handheldItem(ModItems.Weapons.ASTRAL_RIFTBLADE);
-				handheldItem(ModItems.Weapons.VOLCANIC_CLEAVER);
-				handheldItem(ModItems.Weapons.SYLVAN_GLAIVE);
-				handheldItem(ModItems.Weapons.CRYOLUNE_GREATSWORD);
 				
 				// Armor
 				trimmedArmorItem(ModItems.Breadinium.Armor.HELMET);
@@ -88,13 +75,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
 				return withExistingParent(item.getId().getPath(),
 						ResourceLocation.parse("item/generated")).texture("layer0",
-						ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID,"block/" + item.getId().getPath()));
+						ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));
 		}
 		
 		// Shoutout to El_Redstoniano for making this
 		
 		private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-				final String MOD_ID = ThingsForDays.MOD_ID; // Change this to your mod id
+				final String MOD_ID = ExampleMod.MOD_ID; // Change this to your mod id
 				
 				if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
 						trimMaterials.forEach((trimMaterial, value) -> {
@@ -141,6 +128,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 		private ItemModelBuilder handheldItem(DeferredItem<?> item) {
 				return withExistingParent(item.getId().getPath(),
 						ResourceLocation.parse("item/handheld")).texture("layer0",
-						ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID,"item/" + item.getId().getPath()));
+						ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID,"item/" + item.getId().getPath()));
 		}
 }

@@ -1,10 +1,10 @@
 package net.Ash_n_Ryu.examplemod.datagen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.enchantment.ModEnchantments;
-import net.AshLeDrag.thingsfordays.worldgen.ModBiomeModifiers;
-import net.AshLeDrag.thingsfordays.worldgen.ModConfiguredFeatures;
-import net.AshLeDrag.thingsfordays.worldgen.ModPlacedFeatures;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.enchantment.ModEnchantments;
+import net.Ash_n_Ryu.examplemod.worldgen.ModBiomeModifiers;
+import net.Ash_n_Ryu.examplemod.worldgen.ModConfiguredFeatures;
+import net.Ash_n_Ryu.examplemod.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -23,7 +23,7 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 																				 .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 		
 		public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-				super(output, registries, BUILDER, Set.of(ThingsForDays.MOD_ID));
+				super(output, registries, BUILDER, Set.of(ExampleMod.MOD_ID));
 		}
 }
 

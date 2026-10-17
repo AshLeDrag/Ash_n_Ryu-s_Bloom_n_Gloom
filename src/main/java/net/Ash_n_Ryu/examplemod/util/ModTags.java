@@ -16,27 +16,6 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_BREADINIUM_TOOL = createTag("needs_breadinium_tool");
         public static final TagKey<Block> INCORRECT_FOR_BREADINIUM_TOOL = createTag("incorrect_for_breadinium_tool");
         
-        public static final TagKey<Block> NEEDS_CHROMIUM_TOOL = createTag("needs_chromium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_CHROMIUM_TOOL = createTag("incorrect_for_chromium_tool");
-        
-        public static final TagKey<Block> NEEDS_STEEL_TOOL = createTag("needs_steel_tool");
-        public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = createTag("incorrect_for_steel_tool");
-        
-        public static final TagKey<Block> NEEDS_STAINLESS_STEEL_TOOL = createTag("needs_stainless_steel_tool");
-        public static final TagKey<Block> INCORRECT_FOR_STAINLESS_STEEL_TOOL = createTag("incorrect_for_stainless_steel_tool");
-        
-            public static final TagKey<Block> NEEDS_MYTHRIL_TOOL = createTag("needs_mythril_tool");
-        public static final TagKey<Block> INCORRECT_FOR_MYTHRIL_TOOL = createTag("incorrect_for_mythril_tool");
-        public static final TagKey<Block> INCORRECT_FOR_ORGA_TOOL = createTag("incorrect_for_orga_tool");
-        public static final TagKey<Block> INCORRECT_FOR_POLNUMARIUM_TOOL = createTag("incorrect_for_polnumarium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_FATIUM_TOOL = createTag("incorrect_for_fatium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_TITANIUM_TOOL = createTag("incorrect_for_titanium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_HALIUM_TOOL = createTag("incorrect_for_halium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_UHEN_TOOL = createTag("incorrect_for_uhen_tool");
-        public static final TagKey<Block> INCORRECT_FOR_MANTISITE_TOOL = createTag("incorrect_for_mantisite_tool");
-        public static final TagKey<Block> INCORRECT_FOR_FARIUM_TOOL = createTag("incorrect_for_farium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_PLACINE_TOOL = createTag("incorrect_for_placine_tool");
-        
         
         public static final TagKey<Block> BASIC_HAMMER_MINEABLE = createTag("hammer_mineable");
         public static final TagKey<Block> PICKAXE_HAMMER_MINEABLE = createTag("pickaxe_hammer_mineable");

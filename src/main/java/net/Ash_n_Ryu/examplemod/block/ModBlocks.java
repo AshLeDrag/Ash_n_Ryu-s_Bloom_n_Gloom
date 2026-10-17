@@ -1,11 +1,11 @@
 package net.Ash_n_Ryu.examplemod.block;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.custom.*;
-import net.AshLeDrag.thingsfordays.item.ModItems;
-import net.AshLeDrag.thingsfordays.sound.ModSounds;
-import net.AshLeDrag.thingsfordays.worldgen.ModDimensions;
-import net.AshLeDrag.thingsfordays.worldgen.tree.ModTreeGrowers;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.block.custom.*;
+import net.Ash_n_Ryu.examplemod.item.ModItems;
+import net.Ash_n_Ryu.examplemod.sound.ModSounds;
+import net.Ash_n_Ryu.examplemod.worldgen.ModDimensions;
+import net.Ash_n_Ryu.examplemod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -22,7 +22,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ThingsForDays.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ExampleMod.MOD_ID);
 
 
     public static final DeferredBlock<Block> POOP_BLOCK = registerBlock("poop_block",
@@ -30,18 +30,6 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BREADINIUM_ORE = registerBlock("breadinium_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
-    public static final DeferredBlock<Block> BREADINIUM_DEEPSLATE_ORE = registerBlock("breadinium_deepslate_ore",
-            () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
-
-    public static final DeferredBlock<Block> BREADINIUM_END_ORE = registerBlock("breadinium_end_ore",
-            () -> new DropExperienceBlock(UniformInt.of(5, 9), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
-    public static final DeferredBlock<Block> BREADINIUM_NETHER_ORE = registerBlock("breadinium_nether_ore",
-            () -> new DropExperienceBlock(UniformInt.of(1, 5), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.NETHER_ORE)));
-
-    public static final DeferredBlock<Block> BREADINIUM_BLOCK = registerBlock("breadinium_block",
-            () -> new BreadiniumBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
 
 
@@ -102,31 +90,10 @@ public class ModBlocks {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // CropBlocks
 
     public static final DeferredBlock<Block> RADISH_CROP = BLOCKS.register("radish_crop",
             () -> new RadishCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEETROOTS)));
-
-
-
-
 
 
 

@@ -1,9 +1,9 @@
 package net.Ash_n_Ryu.examplemod.enchantment;
 
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.enchantment.custom.LightningStrikerEnchantmentEffect;
-import net.AshLeDrag.thingsfordays.util.ModTags;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.enchantment.custom.LightningStrikerEnchantmentEffect;
+import net.Ash_n_Ryu.examplemod.util.ModTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -18,15 +18,15 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 public class ModEnchantments {
 		
 		public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "lightning_striker"));
+				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "lightning_striker"));
 		public static final ResourceKey<Enchantment> TELEPORTATION = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "teleportation"));
+				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "teleportation"));
 		public static final ResourceKey<Enchantment> HOLLOW = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "hollow"));
+				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "hollow"));
 		public static final ResourceKey<Enchantment> HARDENED = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "hardened"));
+				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "hardened"));
 		public static final ResourceKey<Enchantment> GATHER = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "gather"));
+				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "gather"));
 		
 		public static void bootstrap(BootstrapContext<Enchantment> context) {
 				var enchantments = context.lookup(Registries.ENCHANTMENT);
