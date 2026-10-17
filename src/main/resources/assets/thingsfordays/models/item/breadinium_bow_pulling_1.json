@@ -1,0 +1,6 @@
+{
+    "parent": "thingsfordays:item/breadinium_bow",
+    "textures": {
+        "layer0": "thingsfordays:item/breadinium_bow_pulling_1"
+    }
+}

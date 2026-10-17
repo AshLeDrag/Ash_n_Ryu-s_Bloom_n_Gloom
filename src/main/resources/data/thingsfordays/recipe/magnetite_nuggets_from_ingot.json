@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thingsfordays:magnetite_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thingsfordays:magnetite_nugget"
+  }
+}

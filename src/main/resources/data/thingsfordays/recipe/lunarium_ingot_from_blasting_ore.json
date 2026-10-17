@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.25,
+  "ingredient": {
+    "item": "thingsfordays:lunarium_ore"
+  },
+  "result": {
+    "id": "thingsfordays:lunarium_ingot"
+  }
+}

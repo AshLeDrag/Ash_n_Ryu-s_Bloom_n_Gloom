@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1200,
+  "experience": 0.25,
+  "ingredient": {
+    "item": "thingsfordays:raw_lunarium"
+  },
+  "result": {
+    "id": "thingsfordays:lunarium_ingot"
+  }
+}

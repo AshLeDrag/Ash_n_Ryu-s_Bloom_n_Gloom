@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "thingsfordays:chronium_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thingsfordays:chronium_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thingsfordays:nebulite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thingsfordays:nebulite_ingot"
+  }
+}

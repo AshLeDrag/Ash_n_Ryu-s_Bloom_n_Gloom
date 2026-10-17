@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thingsfordays:sylvarium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thingsfordays:sylvarium_ingot"
+  }
+}

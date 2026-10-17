@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " I ",
+    " I ",
+    " S "
+  ],
+  "key": {
+    "I": {
+      "item": "thingsfordays:arcanite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thingsfordays:arcanite_sword"
+  }
+}

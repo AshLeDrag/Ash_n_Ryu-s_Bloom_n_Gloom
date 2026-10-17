@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "I I",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "thingsfordays:titanorite_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thingsfordays:titanorite_chestplate"
+  }
+}

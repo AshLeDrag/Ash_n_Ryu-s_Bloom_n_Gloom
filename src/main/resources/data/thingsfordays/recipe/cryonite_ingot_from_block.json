@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thingsfordays:cryonite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thingsfordays:cryonite_ingot"
+  }
+}

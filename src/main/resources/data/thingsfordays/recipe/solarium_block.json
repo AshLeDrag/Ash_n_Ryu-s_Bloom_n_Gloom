@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "thingsfordays:solarium_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thingsfordays:solarium_block"
+  }
+}

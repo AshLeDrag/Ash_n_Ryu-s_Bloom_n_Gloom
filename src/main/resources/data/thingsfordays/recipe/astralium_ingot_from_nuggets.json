@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "thingsfordays:astralium_nugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thingsfordays:astralium_ingot"
+  }
+}

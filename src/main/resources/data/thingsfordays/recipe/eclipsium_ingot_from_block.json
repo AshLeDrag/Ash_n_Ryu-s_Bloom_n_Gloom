@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thingsfordays:eclipsium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thingsfordays:eclipsium_ingot"
+  }
+}

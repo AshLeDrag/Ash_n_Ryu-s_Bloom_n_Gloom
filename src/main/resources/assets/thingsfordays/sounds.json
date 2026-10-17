@@ -1,0 +1,32 @@
+{
+  "mana_block_break": {
+    "subtitle": "sounds.thingsfordays.mana_block_break",
+    "sounds": [
+      "thingsfordays:mana_block_break"
+    ]
+  },
+  "mana_block_step": {
+    "subtitle": "sounds.thingsfordays.mana_block_step",
+    "sounds": [
+      "thingsfordays:mana_block_step"
+    ]
+  },
+  "mana_block_place": {
+    "subtitle": "sounds.thingsfordays.mana_block_place",
+    "sounds": [
+      "thingsfordays:mana_block_place"
+    ]
+  },
+  "mana_block_hit": {
+    "subtitle": "sounds.thingsfordays.mana_block_hit",
+    "sounds": [
+      "thingsfordays:mana_block_hit"
+    ]
+  },
+  "mana_block_fall": {
+    "subtitle": "sounds.thingsfordays.mana_block_fall",
+    "sounds": [
+      "thingsfordays:mana_block_fall"
+    ]
+  }
+}

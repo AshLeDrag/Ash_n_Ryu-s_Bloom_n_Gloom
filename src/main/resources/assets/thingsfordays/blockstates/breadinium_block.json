@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "thingsfordays:block/breadinium_block"
+		},
+		"facing=south": {
+			"model": "thingsfordays:block/breadinium_block",
+			"y": 180
+		},
+		"facing=east": {
+			"model": "thingsfordays:block/breadinium_block",
+			"y": 90
+		},
+		"facing=west": {
+			"model": "thingsfordays:block/breadinium_block",
+			"y": 270
+		}
+	}
+}

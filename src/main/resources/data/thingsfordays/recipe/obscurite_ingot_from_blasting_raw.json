@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.25,
+  "ingredient": {
+    "item": "thingsfordays:raw_obscurite"
+  },
+  "result": {
+    "id": "thingsfordays:obscurite_ingot"
+  }
+}

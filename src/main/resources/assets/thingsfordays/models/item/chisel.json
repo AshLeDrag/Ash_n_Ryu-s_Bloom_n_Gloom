@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thingsfordays:item/chisel"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thingsfordays:used": 1
+      },
+      "model": "thingsfordays:item/chisel_used"
+    }
+  ]
+}
