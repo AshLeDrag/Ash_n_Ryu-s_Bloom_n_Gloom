@@ -1,9 +1,9 @@
 package net.Ash_n_Ryu.examplemod.datagen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.ModBlocks;
-import net.AshLeDrag.thingsfordays.item.ModItems;
-import net.AshLeDrag.thingsfordays.util.ModTags;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.block.ModBlocks;
+import net.Ash_n_Ryu.examplemod.item.ModItems;
+import net.Ash_n_Ryu.examplemod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

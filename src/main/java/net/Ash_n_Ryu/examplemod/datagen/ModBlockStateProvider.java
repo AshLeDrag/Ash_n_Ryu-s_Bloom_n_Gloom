@@ -1,9 +1,8 @@
 package net.Ash_n_Ryu.examplemod.datagen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.ModBlocks;
-import net.AshLeDrag.thingsfordays.block.custom.RadishCropBlock;
-import net.AshLeDrag.thingsfordays.item.ModGeneratedOres;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
+import net.Ash_n_Ryu.examplemod.block.ModBlocks;
+import net.Ash_n_Ryu.examplemod.block.custom.RadishCropBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -21,7 +20,7 @@ import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 	public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-		super(output, ThingsForDays.MOD_ID, exFileHelper);
+		super(output, ExampleMod.MOD_ID, exFileHelper);
 	}
 	
 	@Override
@@ -30,27 +29,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			blockWithItem(ModBlocks.MANA_BLOCK);
 			blockWithItem(ModBlocks.BREADINIUM_DEEPSLATE_ORE);
 			blockWithItem(ModBlocks.BREADINIUM_ORE);
-			blockWithItem(ModBlocks.BREADINIUM_NETHER_ORE);
-			blockWithItem(ModBlocks.BREADINIUM_END_ORE);
-			blockWithItem(ModBlocks.BREADINIUM_BLOCK);
-			
-			blockWithItem(ModBlocks.MYTHRIL_DEEPSLATE_ORE);
-			blockWithItem(ModBlocks.MYTHRIL_ORE);
-			blockWithItem(ModBlocks.MYTHRIL_NETHER_ORE);
-			blockWithItem(ModBlocks.MYTHRIL_END_ORE);
-
-			for (ModGeneratedOres.Family family : ModGeneratedOres.ALL) {
-				blockWithItem(family.ore);
-				blockWithItem(family.storageBlock);
-			}
-			blockWithItem(ModBlocks.ASTRALIS_PORTAL);
-			blockWithItem(ModBlocks.VOLCANIS_PORTAL);
-			blockWithItem(ModBlocks.SYLVARIA_PORTAL);
-			blockWithItem(ModBlocks.CRYOLUNE_PORTAL);
-			blockWithItem(ModBlocks.ASTRAL_STONE);
-			blockWithItem(ModBlocks.VOLCANIC_ROCK);
-			blockWithItem(ModBlocks.SYLVAN_STONE);
-			blockWithItem(ModBlocks.CRYO_CRYSTAL);
 			
 			logBlock(((RotatedPillarBlock) ModBlocks.REDWOOD_LOG.get()));
 			axisBlock(((RotatedPillarBlock) ModBlocks.REDWOOD_WOOD.get()), blockTexture(ModBlocks.REDWOOD_LOG.get()), blockTexture(ModBlocks.REDWOOD_LOG.get()));
@@ -97,7 +75,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName) {
 			ConfiguredModel[] models = new ConfiguredModel[1];
 			models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()),
-					ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "block/" + modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()))).renderType("cutout"));
+					ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "block/" + modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()))).renderType("cutout"));
 			
 			return models;
 	}

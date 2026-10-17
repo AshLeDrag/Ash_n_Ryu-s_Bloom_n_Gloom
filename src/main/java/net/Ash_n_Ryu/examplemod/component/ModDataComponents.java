@@ -1,7 +1,7 @@
 package net.Ash_n_Ryu.examplemod.component;
 
 import com.mojang.serialization.Codec;
-import net.AshLeDrag.thingsfordays.ThingsForDays;
+import net.Ash_n_Ryu.examplemod.ExampleMod;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +13,7 @@ import java.util.function.UnaryOperator;
 
 public class ModDataComponents {
 	public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES =
-		DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, ThingsForDays.MOD_ID);
+		DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, ExampleMod.MOD_ID);
 	
 	public static final DeferredHolder<DataComponentType<?>, DataComponentType<BlockPos>> COORDINATES = register("coordinates",builder -> builder.persistent(BlockPos.CODEC));
 	

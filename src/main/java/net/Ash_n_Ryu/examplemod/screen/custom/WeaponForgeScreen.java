@@ -1,6 +1,5 @@
 package net.Ash_n_Ryu.examplemod.screen.custom;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;

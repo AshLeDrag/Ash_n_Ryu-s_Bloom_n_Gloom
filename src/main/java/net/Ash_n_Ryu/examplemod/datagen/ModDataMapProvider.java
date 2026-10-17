@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.examplemod.datagen;
 
-import net.AshLeDrag.thingsfordays.item.ModItems;
+import net.Ash_n_Ryu.examplemod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;
