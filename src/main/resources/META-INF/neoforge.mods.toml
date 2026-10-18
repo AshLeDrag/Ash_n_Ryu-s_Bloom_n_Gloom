@@ -21,13 +21,13 @@ license="MIT"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="thingsfordays" #mandatory
+modId="ash_n_ryus_blom_n_gloom" #mandatory
 
 # The version number of the mod
 version="0.0.1" #mandatory
 
 # A display name for the mod
-displayName="ThingsForDays" #mandatory
+displayName="Ash n Ryu's Bloom n Gloom" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -36,17 +36,17 @@ displayName="ThingsForDays" #mandatory
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
+#logoFile="Ash_n_Ryus_Bloom_n_Gloom.png" #optional
 
 # A text field displayed in the mod UI
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-authors="AshLeDrag"
+authors="AshLeDrag, Ryuwenx"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A mod that adds a bunch of things. Probably too many.
+A Bloom and Gloom update
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
@@ -61,14 +61,14 @@ A mod that adds a bunch of things. Probably too many.
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.thingsfordays]]
+[[dependencies.ash_n_ryus_blom_n_gloom]] #optional
 modId="neoforge"
 type="required"
 versionRange="[21.1,)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.thingsfordays]]
+[[dependencies.ash_n_ryus_blom_n_gloom]]
 modId="minecraft"
 type="required"
 versionRange="[1.21.1,1.22)"
