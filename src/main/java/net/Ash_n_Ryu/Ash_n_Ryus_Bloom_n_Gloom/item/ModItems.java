@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.item;
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.ModBlocks;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.item.custom.*;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.util.ModTags;
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.List;
 
 public class ModItems {
-		public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
+		public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID);
 		
 		public static class Tools {
 				public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel", () -> new ChiselItem(new Item.Properties().durability(32)));

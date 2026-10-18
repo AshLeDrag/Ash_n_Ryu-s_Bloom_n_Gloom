@@ -1,6 +1,7 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.worldgen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
+
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -19,24 +20,16 @@ public class ModBiomeModifiers {
 		// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
 		//     ============ ====   == == == == ==   == ==== ============
 		
-		/* ======================= Breadinium ======================= */
+		/* ======================= Mantisite ======================= */
 		
 		
-		public static final ResourceKey<BiomeModifier> ADD_BREADINIUM_ORE = registerKey("add_breadinium_ore");
-		public static final ResourceKey<BiomeModifier> ADD_NETHER_BREADINIUM_ORE = registerKey("add_nether_breadinium_ore");
-		public static final ResourceKey<BiomeModifier> ADD_END_BREADINIUM_ORE = registerKey("add_end_breadinium_ore");
-		
-		
-		
-		public static final ResourceKey<BiomeModifier> ADD_MYTHRIL_ORE        = registerKey("add_mythril_ore");
-		public static final ResourceKey<BiomeModifier> ADD_NETHER_MYTHRIL_ORE = registerKey("add_nether_mythril_ore");
-		public static final ResourceKey<BiomeModifier> ADD_END_MYTHRIL_ORE    = registerKey("add_end_mythril_ore");
+		public static final ResourceKey<BiomeModifier> ADD_MANTISITE_ORE = registerKey("add_mantisite_ore");
 		
 		//     ============ ====   == == === == ==   == ==== ============
 		// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
 		//     ============ ====   == == === == ==   == ==== ============
 		
-		public static final ResourceKey<BiomeModifier> ADD_TREE_REDWOOD = registerKey("add_tree_redwood");
+		public static final ResourceKey<BiomeModifier> ADD_TREE_ERNEST = registerKey("add_tree_ernest");
 		
 		
 		
@@ -53,66 +46,39 @@ public class ModBiomeModifiers {
 				// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
 				//     ============ ====   == == == == ==   == ==== ============
 				
-				/* ======================= Breadinium ======================= */
+				/* ======================= Mantisite ======================= */
 				
-				context.register(ADD_BREADINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+				context.register(ADD_MANTISITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
 						biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BREADINIUM_ORE_PLACED_KEY)),
+						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANTISITE_ORE_PLACED_KEY)),
 						GenerationStep.Decoration.UNDERGROUND_ORES
 				));
 				// Biome specific example
 				//
-				//	context.register(ADD_BREADINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+				//	context.register(ADD_MANTISITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
 				//			HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
-				//			HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BREADINIUM_ORE_PLACED_KEY)),
+				//			HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANTISITE_ORE_PLACED_KEY)),
 				//			GenerationStep.Decoration.UNDERGROUND_ORES
 				//	));
 				
 				
-				context.register(ADD_NETHER_BREADINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_NETHER),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_BREADINIUM_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES
-				));
-				context.register(ADD_END_BREADINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_END),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_BREADINIUM_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES
-				));
 				
 				
 				
-				
-				
-				
-				/* ======================= Mythril ======================= */
-				
-				context.register(ADD_MYTHRIL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MYTHRIL_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES));
-				context.register(ADD_NETHER_MYTHRIL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_NETHER),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_MYTHRIL_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES));
-				context.register(ADD_END_MYTHRIL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_END),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_MYTHRIL_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES));
 				
 				
 				//     ============ ====   == == === == ==   == ==== ============
 				// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
 				//     ============ ====   == == === == ==   == ==== ============
 				
-				context.register(ADD_TREE_REDWOOD, new BiomeModifiers.AddFeaturesBiomeModifier(
+				context.register(ADD_TREE_ERNEST, new BiomeModifiers.AddFeaturesBiomeModifier(
 						HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.REDWOOD_PLACED_KEY)),
+						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ERNEST_PLACED_KEY)),
 						GenerationStep.Decoration.VEGETAL_DECORATION
 				));
 		}
 		
 		private static ResourceKey<BiomeModifier> registerKey(String name) {
-				return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+				return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
 		}
 }

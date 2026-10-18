@@ -1,7 +1,8 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.worldgen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.ModBlocks;
+
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -23,11 +24,11 @@ public class ModPlacedFeatures {
 		// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
 		//     ============ ====   == == == == ==   == ==== ============
 		
-		/* ======================= Breadinium ======================= */
+		/* ======================= Mantisite ======================= */
 		
-		public static final ResourceKey<PlacedFeature> BREADINIUM_ORE_PLACED_KEY = registerKey("breadinium_ore_placed");
-		public static final ResourceKey<PlacedFeature> NETHER_BREADINIUM_ORE_PLACED_KEY = registerKey("nether_breadinium_ore_placed");
-		public static final ResourceKey<PlacedFeature> END_BREADINIUM_ORE_PLACED_KEY = registerKey("end_breadinium_ore_placed");
+		public static final ResourceKey<PlacedFeature> MANTISITE_ORE_PLACED_KEY = registerKey("mantisite_ore_placed");
+		public static final ResourceKey<PlacedFeature> NETHER_MANTISITE_ORE_PLACED_KEY = registerKey("nether_mantisite_ore_placed");
+		public static final ResourceKey<PlacedFeature> END_MANTISITE_ORE_PLACED_KEY = registerKey("end_mantisite_ore_placed");
 		
 		
 		public static final ResourceKey<PlacedFeature> MYTHRIL_ORE_PLACED_KEY        = registerKey("mythril_ore_placed");
@@ -39,7 +40,7 @@ public class ModPlacedFeatures {
 		//     ============ ====   == == === == ==   == ==== ============
 		
 		
-		public static final ResourceKey<PlacedFeature> REDWOOD_PLACED_KEY = registerKey("redwood_placed");
+		public static final ResourceKey<PlacedFeature> ERNEST_PLACED_KEY = registerKey("ernest_placed");
 		
 		
 		
@@ -51,29 +52,14 @@ public class ModPlacedFeatures {
 				// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
 				//     ============ ====   == == == == ==   == ==== ============
 				
-				/* ======================= Breadinium ======================= */
+				/* ======================= Mantisite ======================= */
 				
-				register(context, BREADINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BREADINIUM_ORE_KEY),
-							ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-				register(context, NETHER_BREADINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_BREADINIUM_ORE_KEY),
-							ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-				register(context, END_BREADINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BREADINIUM_ORE_KEY),
+				register(context, MANTISITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_MANTISITE_ORE_KEY),
 							ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 				
 				
 				
 				
-				
-				
-				register(context, MYTHRIL_ORE_PLACED_KEY,
-						configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_MYTHRIL_ORE_KEY),
-						ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-				register(context, NETHER_MYTHRIL_ORE_PLACED_KEY,
-						configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_MYTHRIL_ORE_KEY),
-						ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-				register(context, END_MYTHRIL_ORE_PLACED_KEY,
-						configuredFeatures.getOrThrow(ModConfiguredFeatures.END_MYTHRIL_ORE_KEY),
-						ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 				
 				
 				//     ============ ====   == == === == ==   == ==== ============
@@ -81,13 +67,13 @@ public class ModPlacedFeatures {
 				//     ============ ====   == == === == ==   == ==== ============
 				
 				
-				register(context, REDWOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REDWOOD_KEY),
-						VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.REDWOOD_SAPLING.get()));
+				register(context, ERNEST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ERNEST_KEY),
+						VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.ERNEST_SAPLING.get()));
 				
 		}
 		
 		private static ResourceKey<PlacedFeature> registerKey(String name) {
-				return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+				return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
 		}
 		
 		private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,

@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.datagen;
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.ModBlocks;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.custom.RadishCropBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -20,7 +20,7 @@ import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 	public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-		super(output, ExampleMod.MOD_ID, exFileHelper);
+		super(output, Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, exFileHelper);
 	}
 	
 	@Override
@@ -75,7 +75,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName) {
 			ConfiguredModel[] models = new ConfiguredModel[1];
 			models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()),
-					ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "block/" + modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()))).renderType("cutout"));
+					ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "block/" + modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()))).renderType("cutout"));
 			
 			return models;
 	}

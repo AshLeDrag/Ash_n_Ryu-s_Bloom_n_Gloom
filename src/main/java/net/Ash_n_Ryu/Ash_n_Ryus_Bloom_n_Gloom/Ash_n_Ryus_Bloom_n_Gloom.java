@@ -51,8 +51,8 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod {
+@Mod(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID)
+public class Ash_n_Ryus_Bloom_n_Gloom {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "Ash_n_Ryus_Bloom_n_Gloom";
     // Directly reference a slf4j logger
@@ -84,11 +84,11 @@ public class ExampleMod {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ExampleMod(IEventBus modEventBus, ModContainer modContainer) {// Register the commonSetup method for modloading
+    public Ash_n_Ryus_Bloom_n_Gloom(IEventBus modEventBus, ModContainer modContainer) {// Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         
         // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Note that this is necessary if and only if we want *this* class (Ash_n_Ryus_Bloom_n_Gloom) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
         

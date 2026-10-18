@@ -1,7 +1,7 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.enchantment;
 
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.util.ModTags;
 import net.minecraft.core.registries.Registries;
@@ -18,15 +18,15 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 public class ModEnchantments {
 		
 		public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "lightning_striker"));
+				ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "lightning_striker"));
 		public static final ResourceKey<Enchantment> TELEPORTATION = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "teleportation"));
+				ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "teleportation"));
 		public static final ResourceKey<Enchantment> HOLLOW = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "hollow"));
+				ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "hollow"));
 		public static final ResourceKey<Enchantment> HARDENED = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "hardened"));
+				ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "hardened"));
 		public static final ResourceKey<Enchantment> GATHER = ResourceKey.create(Registries.ENCHANTMENT,
-				ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "gather"));
+				ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "gather"));
 		
 		public static void bootstrap(BootstrapContext<Enchantment> context) {
 				var enchantments = context.lookup(Registries.ENCHANTMENT);

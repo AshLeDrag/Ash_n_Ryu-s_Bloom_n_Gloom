@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.entity;
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.entity.custom.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public class ModEntities {
 		public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-				DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, ExampleMod.MOD_ID);
+				DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, Ash_n_Ryus_Bloom_n_Gloom.MOD_ID);
 		
 		
 		public static final Supplier<EntityType<TeleportParticleEntity>> SPINNING_CUBE =

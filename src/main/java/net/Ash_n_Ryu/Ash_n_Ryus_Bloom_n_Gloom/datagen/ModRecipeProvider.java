@@ -22,8 +22,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		@Override
 		protected void buildRecipes(RecipeOutput recipeOutput) {
 				
-				modRecipes(recipeOutput);
-				
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.Breadinium.Tools.HAMMER.get())
 						.requires(ModItems.Breadinium.Tools.AXE_HAMMER)
 						.unlockedBy("has_bismuth_block", has(ModItems.Breadinium.Resource.INGOT)).save(recipeOutput);
@@ -55,17 +53,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		
 		
 		
-		protected static void modRecipes(RecipeOutput recipeOutput) {
-				WeaponForgeRecipeBuilder.create(RecipeCategory.MISC)
-						.forgingTime(800)
-						.center(Items.NETHER_STAR)
-						.north(ModGeneratedOres.ALL.get(0).ingot.get()).south(ModGeneratedOres.ALL.get(0).ingot.get())
-						.east(ModGeneratedOres.ALL.get(3).ingot.get()).west(ModGeneratedOres.ALL.get(6).ingot.get())
-						.farNorthEast(ModGeneratedOres.ALL.get(8).ingot.get()).farNorthWest(ModGeneratedOres.ALL.get(20).ingot.get())
-						.result(ModItems.Weapons.ASTRAL_RIFTBLADE.get())
-						.unlockedBy("has_astralium", has(ModGeneratedOres.ALL.get(0).ingot.get()))
-						.save(recipeOutput, ThingsForDays.MOD_ID + ":astral_riftblade_forging");
-		}
 		
 		
 		

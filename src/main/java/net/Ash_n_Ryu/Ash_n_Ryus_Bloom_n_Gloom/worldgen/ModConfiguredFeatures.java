@@ -1,8 +1,8 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.worldgen;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.block.ModBlocks;
-import net.AshLeDrag.thingsfordays.worldgen.trunkplacers.GiantSequoiaTrunkPlacer;
+
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -18,6 +18,8 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -30,15 +32,9 @@ public class ModConfiguredFeatures {
 		// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
 		//     ============ ====   == == == == ==   == ==== ============
 		
-		/* ======================= Breadinium ======================= */
+		/* ======================= Mantisite ======================= */
 		
-		public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_BREADINIUM_ORE_KEY = registerKey("breadinium_ore");
-		public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_BREADINIUM_ORE_KEY = registerKey("nether_breadinium_ore");
-		public static final ResourceKey<ConfiguredFeature<?, ?>> END_BREADINIUM_ORE_KEY = registerKey("end_breadinium_ore");
-		
-		public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MYTHRIL_ORE_KEY = registerKey("mythril_ore");
-		public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_MYTHRIL_ORE_KEY   = registerKey("nether_mythril_ore");
-		public static final ResourceKey<ConfiguredFeature<?, ?>> END_MYTHRIL_ORE_KEY      = registerKey("end_mythril_ore");
+		public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MANTISITE_ORE_KEY = registerKey("mantisite_ore");
 		
 		
 		
@@ -49,7 +45,7 @@ public class ModConfiguredFeatures {
 		//     ============ ====   == == === == ==   == ==== ============
 		
 		
-		public static final ResourceKey<ConfiguredFeature<?, ?>> REDWOOD_KEY = registerKey("redwood");
+		public static final ResourceKey<ConfiguredFeature<?, ?>> ERNEST_KEY = registerKey("ernest");
 		
 		
 		
@@ -57,31 +53,24 @@ public class ModConfiguredFeatures {
 				
 				RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
 				RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-				RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
-				RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 				
-				List<OreConfiguration.TargetBlockState> overworldBreadiniumOres = List.of(
-						OreConfiguration.target(stoneReplaceables, ModBlocks.BREADINIUM_ORE.get().defaultBlockState()),
-						OreConfiguration.target(deepslateReplaceables, ModBlocks.BREADINIUM_DEEPSLATE_ORE.get().defaultBlockState()));
+				List<OreConfiguration.TargetBlockState> overworldMantisiteOres = List.of(
+						OreConfiguration.target(stoneReplaceables, ModBlocks.MANTISTE_ORE.get().defaultBlockState()),
+						OreConfiguration.target(deepslateReplaceables, ModBlocks.MANTISTE_DEEPSLATE_ORE.get().defaultBlockState()));
 				
-				register(context, OVERWORLD_BREADINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldBreadiniumOres, 9));
+				register(context, OVERWORLD_MANTISITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMantisiteOres, 9));
 				
-				register(context, NETHER_BREADINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-						ModBlocks.BREADINIUM_NETHER_ORE.get().defaultBlockState(), 9));
 				
-				register(context, END_BREADINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-						ModBlocks.BREADINIUM_END_ORE.get().defaultBlockState(), 9));
-				
-				// ── Giant Redwood Sequoia ─────────────────────────────────────────────
+				// ── Giant Ernest Sequoia ─────────────────────────────────────────────
 				// Height: 60 + rand(0..55) = 60 to 115 blocks tall (clamped in getTreeHeight)
 				// Trunk:  2x2 logs via GiantSequoiaTrunkPlacer (bypasses vanilla 80-block cap)
 				// Foliage: MegaPineFoliagePlacer gives layered pine-crown rings at each
 				//          foliage attachment (trunk top + every branch tip)
-				register(context, REDWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-						BlockStateProvider.simple(ModBlocks.REDWOOD_LOG.get()),
-						new GiantSequoiaTrunkPlacer(60, 40, 15),    // 60 + 0..55 = exactly 60-115 blocks
+				register(context, ERNEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+						BlockStateProvider.simple(ModBlocks.ERNEST_LOG.get()),
+						new ForkingTrunkPlacer(60, 40, 15),    // 60 + 0..55 = exactly 60-115 blocks
 						
-						BlockStateProvider.simple(ModBlocks.REDWOOD_LEAVES.get()),
+						BlockStateProvider.simple(ModBlocks.ERNEST_LEAVES.get()),
 						new MegaPineFoliagePlacer(
 								ConstantInt.of(0),                  // radius (spread handled by trunk placer)
 								ConstantInt.of(0),                  // offset
@@ -93,20 +82,12 @@ public class ModConfiguredFeatures {
 																					.ignoreVines()
 																					.build());
 				
-				List<OreConfiguration.TargetBlockState> overworldMythrilOres = List.of(
-						OreConfiguration.target(stoneReplaceables,    ModBlocks.MYTHRIL_ORE.get().defaultBlockState()),
-						OreConfiguration.target(deepslateReplaceables, ModBlocks.MYTHRIL_DEEPSLATE_ORE.get().defaultBlockState()));
 				
-				register(context, OVERWORLD_MYTHRIL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMythrilOres, 9));
-				register(context, NETHER_MYTHRIL_ORE_KEY,   Feature.ORE, new OreConfiguration(netherrackReplaceables,
-						ModBlocks.MYTHRIL_NETHER_ORE.get().defaultBlockState(), 9));
-				register(context, END_MYTHRIL_ORE_KEY,      Feature.ORE, new OreConfiguration(endReplaceables,
-						ModBlocks.MYTHRIL_END_ORE.get().defaultBlockState(), 9));
 		
 		}
 		
 		public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-				return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+				return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
 		}
 		
 		private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,

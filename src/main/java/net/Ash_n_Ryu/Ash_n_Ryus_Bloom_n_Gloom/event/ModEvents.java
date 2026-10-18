@@ -1,7 +1,7 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.event;
 
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.item.custom.BreadiniumHammerItem;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.potion.ModPotions;
 import net.minecraft.core.BlockPos;
@@ -20,7 +20,7 @@ import net.neoforged.neoforge.event.level.BlockEvent;
 import java.util.HashSet;
 import java.util.Set;
 
-@EventBusSubscriber(modid = ExampleMod.MOD_ID)
+@EventBusSubscriber(modid = Ash_n_Ryus_Bloom_n_Gloom.MOD_ID)
 public class ModEvents {
 		private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 		

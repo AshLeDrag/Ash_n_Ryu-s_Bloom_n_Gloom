@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.datagen;
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -16,7 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = ExampleMod.MOD_ID)
+@EventBusSubscriber(modid = Ash_n_Ryus_Bloom_n_Gloom.MOD_ID)
 public class DataGenarators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){

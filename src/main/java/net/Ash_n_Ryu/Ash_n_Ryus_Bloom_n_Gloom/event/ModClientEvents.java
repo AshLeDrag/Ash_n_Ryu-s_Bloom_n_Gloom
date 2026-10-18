@@ -2,7 +2,7 @@ package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.event;
 
 import net.AshLeDrag.thingsfordays.ThingsForDays;
 import net.AshLeDrag.thingsfordays.item.ModItems;
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -10,7 +10,7 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 
 
 
-@EventBusSubscriber(modid = ExampleMod.MOD_ID, value =  Dist.CLIENT)
+@EventBusSubscriber(modid = Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, value =  Dist.CLIENT)
 public class ModClientEvents {
 		@SubscribeEvent
 		public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {

@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.datagen;
 
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.block.ModBlocks;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.item.ModItems;
 import net.minecraft.data.PackOutput;
@@ -22,7 +22,7 @@ import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
 		public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-				super(output, ExampleMod.MOD_ID, existingFileHelper);
+				super(output, Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, existingFileHelper);
 		}
 		
 		private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -75,13 +75,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
 				return withExistingParent(item.getId().getPath(),
 						ResourceLocation.parse("item/generated")).texture("layer0",
-						ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));
+						ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,"block/" + item.getId().getPath()));
 		}
 		
 		// Shoutout to El_Redstoniano for making this
 		
 		private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-				final String MOD_ID = ExampleMod.MOD_ID; // Change this to your mod id
+				final String MOD_ID = Ash_n_Ryus_Bloom_n_Gloom.MOD_ID; // Change this to your mod id
 				
 				if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
 						trimMaterials.forEach((trimMaterial, value) -> {
@@ -128,6 +128,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 		private ItemModelBuilder handheldItem(DeferredItem<?> item) {
 				return withExistingParent(item.getId().getPath(),
 						ResourceLocation.parse("item/handheld")).texture("layer0",
-						ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID,"item/" + item.getId().getPath()));
+						ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,"item/" + item.getId().getPath()));
 		}
 }

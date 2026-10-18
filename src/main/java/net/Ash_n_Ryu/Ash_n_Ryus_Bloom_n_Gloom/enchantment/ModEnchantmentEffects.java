@@ -1,7 +1,7 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.enchantment;
 
 import com.mojang.serialization.MapCodec;
-import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.ExampleMod;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public class ModEnchantmentEffects {
 		public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> ENTITY_ENCHANTMENT_EFFECTS =
-				DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, ExampleMod.MOD_ID);
+				DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, Ash_n_Ryus_Bloom_n_Gloom.MOD_ID);
 		
 		
 		public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
