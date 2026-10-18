@@ -1,6 +1,6 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.util;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -13,8 +13,8 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
         
-        public static final TagKey<Block> NEEDS_BREADINIUM_TOOL = createTag("needs_breadinium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_BREADINIUM_TOOL = createTag("incorrect_for_breadinium_tool");
+        public static final TagKey<Block> NEEDS_MANTISITE_TOOL = createTag("needs_mantisite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_MANTISITE_TOOL = createTag("incorrect_for_mantisite_tool");
         
         
         public static final TagKey<Block> BASIC_HAMMER_MINEABLE = createTag("hammer_mineable");
@@ -25,7 +25,7 @@ public class ModTags {
         
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
         }
     }
 
@@ -34,7 +34,7 @@ public class ModTags {
         public static final TagKey<Item> COLOSSAL_SWORD_ENCHANTABLE = createTag("colossal_enchantable");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
         }
     }
     
@@ -43,7 +43,7 @@ public class ModTags {
         
         private static TagKey<Enchantment> createTag(String name) {
             return TagKey.create(Registries.ENCHANTMENT,
-                  ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, name));
+                  ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, name));
         }
     }
 }

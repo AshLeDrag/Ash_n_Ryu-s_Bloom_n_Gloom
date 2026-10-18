@@ -13,6 +13,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -24,16 +26,27 @@ public class ModBlocks {
       
       
       
-      public static final DeferredBlock<Block> MANTISTE_ORE = registerBlock("mantisite_ore",
+      public static final DeferredBlock<Block> MANTISITE_ORE = registerBlock("mantisite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      public static final DeferredBlock<Block> MANTISTE_DEEPSLATE_ORE = registerBlock("mantisite_ore",
+      public static final DeferredBlock<Block> MANTISITE_DEEPSLATE_ORE = registerBlock("mantisite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      public static final DeferredBlock<Block> MANTISTE_BLOCK = registerBlock("mantisite_ore",
+      public static final DeferredBlock<Block> MANTISITE_BLOCK = registerBlock("mantisite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      public static final DeferredBlock<Block> RAW_MANTISTE_BLOCK = registerBlock("mantisite_ore",
+      public static final DeferredBlock<Block> RAW_MANTISITE_BLOCK = registerBlock("mantisite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
       
       
+      
+      
+      
+      public static final DeferredBlock<Block> DARK_ERNEST_LOG = registerBlock("dark_ernest_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+      public static final DeferredBlock<Block> DARK_ERNEST_WOOD = registerBlock("dark_ernest_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+      public static final DeferredBlock<Block> DARK_STRIPPED_ERNEST_LOG = registerBlock("dark_stripped_ernest_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+      public static final DeferredBlock<Block> DARK_STRIPPED_ERNEST_WOOD = registerBlock("dark_stripped_ernest_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
       
       
       
@@ -45,6 +58,32 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
       public static final DeferredBlock<Block> STRIPPED_ERNEST_WOOD = registerBlock("stripped_ernest_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+      
+      public static final DeferredBlock<Block> ERNEST_STAIRS = registerBlock("ernest_stairs",
+            () -> new StairBlock(ModBlocks.ERNEST_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      public static final DeferredBlock<SlabBlock> ERNEST_SLAB = registerBlock("ernest_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      
+      public static final DeferredBlock<PressurePlateBlock> ERNEST_PRESSURE_PLATE = registerBlock("ernest_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      public static final DeferredBlock<ButtonBlock> ERNEST_BUTTON = registerBlock("ernest_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noCollission()));
+      
+      public static final DeferredBlock<FenceBlock> ERNEST_FENCE = registerBlock("ernest_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      public static final DeferredBlock<FenceGateBlock> ERNEST_FENCE_GATE = registerBlock("ernest_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      public static final DeferredBlock<WallBlock> ERNEST_WALL = registerBlock("ernest_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+      
+      public static final DeferredBlock<DoorBlock> ERNEST_DOOR = registerBlock("ernest_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
+      public static final DeferredBlock<TrapDoorBlock> ERNEST_TRAPDOOR = registerBlock("ernest_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
+      
+      
+      
+      
       
       
       public static final DeferredBlock<Block> ERNEST_PLANKS = registerBlock("ernest_planks",
