@@ -26,26 +26,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 			// cubeAll Blocks
-			blockWithItem(ModBlocks.MANA_BLOCK);
-			blockWithItem(ModBlocks.BREADINIUM_DEEPSLATE_ORE);
-			blockWithItem(ModBlocks.BREADINIUM_ORE);
+			blockWithItem(ModBlocks.MANTISITE_DEEPSLATE_ORE);
+			blockWithItem(ModBlocks.MANTISITE_ORE);
 			
-			logBlock(((RotatedPillarBlock) ModBlocks.REDWOOD_LOG.get()));
-			axisBlock(((RotatedPillarBlock) ModBlocks.REDWOOD_WOOD.get()), blockTexture(ModBlocks.REDWOOD_LOG.get()), blockTexture(ModBlocks.REDWOOD_LOG.get()));
-			logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_REDWOOD_LOG.get()));
-			axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_REDWOOD_WOOD.get()), blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_REDWOOD_LOG.get()));
+			logBlock(((RotatedPillarBlock) ModBlocks.ERNEST_LOG.get()));
+			axisBlock(((RotatedPillarBlock) ModBlocks.ERNEST_WOOD.get()), blockTexture(ModBlocks.ERNEST_LOG.get()), blockTexture(ModBlocks.ERNEST_LOG.get()));
+			logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ERNEST_LOG.get()));
+			axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ERNEST_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ERNEST_LOG.get()), blockTexture(ModBlocks.STRIPPED_ERNEST_LOG.get()));
 			
-			blockItem(ModBlocks.REDWOOD_LOG);
-			blockItem(ModBlocks.REDWOOD_WOOD);
-			blockItem(ModBlocks.STRIPPED_REDWOOD_LOG);
-			blockItem(ModBlocks.STRIPPED_REDWOOD_WOOD);
+			blockItem(ModBlocks.ERNEST_LOG);
+			blockItem(ModBlocks.ERNEST_WOOD);
+			blockItem(ModBlocks.STRIPPED_ERNEST_LOG);
+			blockItem(ModBlocks.STRIPPED_ERNEST_WOOD);
 			
-			blockWithItem(ModBlocks.REDWOOD_PLANKS);
+			blockWithItem(ModBlocks.ERNEST_PLANKS);
 			
-			blockWithItem(ModBlocks.WEAPON_FORGE);
-			
-			leavesBlock(ModBlocks.REDWOOD_LEAVES);
-			saplingBlock(ModBlocks.REDWOOD_SAPLING);
+			leavesBlock(ModBlocks.ERNEST_LEAVES);
+			saplingBlock(ModBlocks.ERNEST_SAPLING);
 			
 			
 			

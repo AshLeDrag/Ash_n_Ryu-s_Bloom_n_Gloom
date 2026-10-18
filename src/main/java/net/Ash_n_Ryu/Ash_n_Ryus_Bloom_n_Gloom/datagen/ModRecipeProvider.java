@@ -22,9 +22,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		@Override
 		protected void buildRecipes(RecipeOutput recipeOutput) {
 				
-				ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.Breadinium.Tools.HAMMER.get())
-						.requires(ModItems.Breadinium.Tools.AXE_HAMMER)
-						.unlockedBy("has_bismuth_block", has(ModItems.Breadinium.Resource.INGOT)).save(recipeOutput);
+				ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.Mantisite.Tools.HAMMER.get())
+						.requires(ModItems.Mantisite.Tools.AXE_HAMMER)
+						.unlockedBy("has_bismuth_block", has(ModItems.Mantisite.Resource.INGOT)).save(recipeOutput);
 				
 				
 				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.Weapons.COLOSSAL_SWORD)
@@ -39,13 +39,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 						.unlockedBy("has_stainless_steel_ingot", has(ModItems.Steel.Stainless.Resource.INGOT)).save(recipeOutput);
 				
 				
-				List<ItemLike> BREADINIUM_SMELTABLES = List.of(ModItems.Breadinium.Resource.RAW,
-						ModBlocks.BREADINIUM_ORE, ModBlocks.BREADINIUM_DEEPSLATE_ORE,
-						ModBlocks.BREADINIUM_NETHER_ORE, ModBlocks.BREADINIUM_END_ORE);
+				List<ItemLike> MANTISITE_SMELTABLES = List.of(ModItems.Mantisite.Resource.RAW,
+						ModBlocks.MANTISITE_ORE, ModBlocks.MANTISITE_DEEPSLATE_ORE,
+						ModBlocks.MANTISITE_NETHER_ORE, ModBlocks.MANTISITE_END_ORE);
 				
 				
 				
-				oreRecipies(recipeOutput, BREADINIUM_SMELTABLES, RecipeCategory.MISC, ModItems.Breadinium.Resource.INGOT, ModBlocks.BREADINIUM_BLOCK, 0.25f,  600, "breadinium");
+				oreRecipies(recipeOutput, MANTISITE_SMELTABLES, RecipeCategory.MISC, ModItems.Mantisite.Resource.INGOT, ModBlocks.MANTISITE_BLOCK, 0.25f,  600, "mantisite");
 				
 		}
 		

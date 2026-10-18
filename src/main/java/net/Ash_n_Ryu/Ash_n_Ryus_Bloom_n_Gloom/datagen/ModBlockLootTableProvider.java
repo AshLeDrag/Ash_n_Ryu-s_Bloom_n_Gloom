@@ -30,30 +30,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.MANA_BLOCK.get());
-        dropSelf(ModBlocks.WEAPON_FORGE.get());
+        dropSelf(ModBlocks.MANTISITE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_MANTISITE_BLOCK.get());
         
         
-        add(ModBlocks.BREADINIUM_ORE.get(),
-              block -> createOreDrop(ModBlocks.BREADINIUM_ORE.get(), ModItems.Breadinium.Resource.RAW.get()));
-        add(ModBlocks.BREADINIUM_DEEPSLATE_ORE.get(),
-              block -> createMultipleOreDrops(ModBlocks.BREADINIUM_DEEPSLATE_ORE.get(), ModItems.Breadinium.Resource.RAW.get(), 2, 5));
-        add(ModBlocks.BREADINIUM_END_ORE.get(),
-              block -> createMultipleOreDrops(ModBlocks.BREADINIUM_END_ORE.get(), ModItems.Breadinium.Resource.RAW.get(), 3, 6));
-        add(ModBlocks.BREADINIUM_NETHER_ORE.get(),
-              block -> createMultipleOreDrops(ModBlocks.BREADINIUM_NETHER_ORE.get(), ModItems.Breadinium.Resource.RAW.get(), 4, 8));
-        dropSelf(ModBlocks.BREADINIUM_BLOCK.get());
-
-        addFourVariantOreDrops(
-              ModBlocks.ORGA_ORE.get(), ModBlocks.ORGA_DEEPSLATE_ORE.get(),
-              ModBlocks.ORGA_NETHER_ORE.get(), ModBlocks.ORGA_END_ORE.get(),
-              ModItems.Orga.Resource.RAW.get());
+        add(ModBlocks.MANTISITE_ORE.get(),
+              block -> createOreDrop(ModBlocks.MANTISITE_ORE.get(), ModItems.Mantisite.Resource.RAW.get()));
+        add(ModBlocks.MANTISITE_DEEPSLATE_ORE.get(),
+              block -> createMultipleOreDrops(ModBlocks.MANTISITE_DEEPSLATE_ORE.get(), ModItems.Mantisite.Resource.RAW.get(), 2, 5));
         
         
         
         
-        add(ModBlocks.REDWOOD_LEAVES.get(), block ->
-                                                         createLeavesDrops(block, ModBlocks.REDWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.ERNEST_LEAVES.get(), block ->
+                                                         createLeavesDrops(block, ModBlocks.ERNEST_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         
         
         

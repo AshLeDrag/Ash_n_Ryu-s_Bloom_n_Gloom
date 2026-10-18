@@ -1,8 +1,8 @@
 package net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.util;
 
-import net.AshLeDrag.thingsfordays.ThingsForDays;
-import net.AshLeDrag.thingsfordays.component.ModDataComponents;
-import net.AshLeDrag.thingsfordays.item.ModItems;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.Ash_n_Ryus_Bloom_n_Gloom;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.component.ModDataComponents;
+import net.Ash_n_Ryu.Ash_n_Ryus_Bloom_n_Gloom.item.ModItems;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -10,10 +10,10 @@ import net.minecraft.world.item.Item;
 
 public class ModItemProperties {
 		public static void addCustomItemProperties() {
-				ItemProperties.register(ModItems.Tools.CHISEL.get(), ResourceLocation.fromNamespaceAndPath(ThingsForDays.MOD_ID, "used"),
+				ItemProperties.register(ModItems.Tools.CHISEL.get(), ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "used"),
 						(stack, level, entity, seed) -> stack.get(ModDataComponents.COORDINATES) != null ? 1f: 0f);
 				
-				makeCustomBow(ModItems.Breadinium.Weapons.BOW.get());
+				makeCustomBow(ModItems.Mantisite.Weapons.BOW.get());
 		}
 		
 		private static void makeCustomBow(Item item){
