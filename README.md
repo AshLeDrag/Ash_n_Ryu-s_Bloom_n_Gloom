@@ -1,25 +1,14 @@
 
-Installation information
+General information
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+mon pote et moi avons rejoin un JamDrops de L'AirHisson et ça c'est notre mod
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+my friend and I joined a JamDrops by L'AirHisson and this is the mod we made
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+About us/ A propos de nous
+=======
+Ryuwenx et AshLeDrag (nous) on est potes depuis le collège et même si on n'a pas fais de projet a deux, on s'ait souvent aider dans la creation de jeu video ou autre.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Ryuwenx et AshLeDrag (us) we have been friends since middleschool and even though we never did a real project together we often helped eachother in game creation and other things
