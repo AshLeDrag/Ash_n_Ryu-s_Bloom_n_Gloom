@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mantisite_deepslate_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ash_n_ryus_bloom_n_gloom:mantisite_deepslate_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ash_n_ryus_bloom_n_gloom:mantisite_ingot_from_smelting_mantisite_deepslate_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mantisite_deepslate_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ash_n_ryus_bloom_n_gloom:mantisite_ingot_from_smelting_mantisite_deepslate_ore"
+    ]
+  }
+}
