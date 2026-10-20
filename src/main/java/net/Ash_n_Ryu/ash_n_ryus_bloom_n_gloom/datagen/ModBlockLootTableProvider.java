@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -46,8 +47,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ERNEST_DOOR.get());
         dropSelf(ModBlocks.ERNEST_TRAPDOOR.get());
         dropSelf(ModBlocks.ERNEST_PRESSURE_PLATE.get());
-        dropSelf(ModBlocks.ERNEST_WALL.get());
         dropSelf(ModBlocks.ERNEST_SAPLING.get());
+        dropSelf(ModBlocks.DEAD_ERNEST_SAPLING.get());
         
         add(ModBlocks.MANTISITE_ORE.get(),
               block -> createOreDrop(ModBlocks.MANTISITE_ORE.get(), ModItems.Mantisite.Resource.RAW.get()));
@@ -59,6 +60,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         
         add(ModBlocks.ERNEST_LEAVES.get(), block ->
                                                          createLeavesDrops(block, ModBlocks.ERNEST_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.DEAD_ERNEST_LEAVES.get(), block ->
+                                                         createLeavesDrops(block, Blocks.DEAD_BUSH, NORMAL_LEAVES_SAPLING_CHANCES));
         
         
         

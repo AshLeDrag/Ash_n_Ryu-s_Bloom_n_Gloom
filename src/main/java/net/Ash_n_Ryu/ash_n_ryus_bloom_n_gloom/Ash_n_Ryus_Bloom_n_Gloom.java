@@ -9,6 +9,7 @@ import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.item.ModArmorMaterials;
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.item.ModCreativeModeTabs;
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.item.ModItems;
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.sound.ModSounds;
+import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.worldgen.ModTerraBlender;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -99,7 +100,7 @@ public class Ash_n_Ryus_Bloom_n_Gloom {
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         
-        
+        ModTerraBlender.registerRegions();
         
         
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us

@@ -26,8 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 			// cubeAll Blocks
-			blockWithItem(ModBlocks.MANTISITE_DEEPSLATE_ORE);
-			blockWithItem(ModBlocks.MANTISITE_ORE);
+//			blockWithItem(ModBlocks.MANTISITE_DEEPSLATE_ORE);
+//			blockWithItem(ModBlocks.MANTISITE_ORE);
 			
 			logBlock(((RotatedPillarBlock) ModBlocks.ERNEST_LOG.get()));
 			axisBlock(((RotatedPillarBlock) ModBlocks.ERNEST_WOOD.get()), blockTexture(ModBlocks.ERNEST_LOG.get()), blockTexture(ModBlocks.ERNEST_LOG.get()));
@@ -42,14 +42,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			blockWithItem(ModBlocks.ERNEST_PLANKS);
 			
 			leavesBlock(ModBlocks.ERNEST_LEAVES);
+			leavesBlock(ModBlocks.DEAD_ERNEST_LEAVES);
 			saplingBlock(ModBlocks.ERNEST_SAPLING);
+			saplingBlock(ModBlocks.DEAD_ERNEST_SAPLING);
+			
+			stairsBlock(ModBlocks.ERNEST_STAIRS.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			slabBlock(ModBlocks.ERNEST_SLAB.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			
+			buttonBlock(ModBlocks.ERNEST_BUTTON.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			pressurePlateBlock(ModBlocks.ERNEST_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			
+			fenceBlock(ModBlocks.ERNEST_FENCE.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			fenceGateBlock(ModBlocks.ERNEST_FENCE_GATE.get(), blockTexture(ModBlocks.ERNEST_PLANKS.get()));
+			
+			doorBlockWithRenderType(ModBlocks.ERNEST_DOOR.get(), modLoc("block/ernest_door_bottom"), modLoc("block/ernest_door_top"), "cutout");
+			trapdoorBlockWithRenderType(ModBlocks.ERNEST_TRAPDOOR.get(), modLoc("block/ernest_trapdoor"), true, "cutout");
 			
 			
-			
-			
-			
-			// Crops
-			makeCrop(((CropBlock) ModBlocks.RADISH_CROP.get()), "radish_crop_stage");
 	}
 	
 	private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

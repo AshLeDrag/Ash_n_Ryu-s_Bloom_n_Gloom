@@ -41,26 +41,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 		@Override
 		protected void registerModels() {
-				// basicItem Items
-				basicItem(ModItems.Foods.RADISH.get());
-				basicItem(ModItems.Fuels.STARLIGHT_ASHES.get());
-				basicItem(ModItems.Mantisite.Resource.RAW.get());
-				basicItem(ModItems.Mantisite.Resource.INGOT.get());
-				basicItem(ModItems.Foods.RADISH_SEEDS.get());
-				
-				// handheldItem Items
-				handheldItem(ModItems.Mantisite.Weapons.SWORD);
-				handheldItem(ModItems.Mantisite.Tools.AXE);
-				handheldItem(ModItems.Mantisite.Tools.PICKAXE);
-				handheldItem(ModItems.Mantisite.Tools.SHOVEL);
-				handheldItem(ModItems.Mantisite.Tools.HOE);
-				
-				// Armor
-				trimmedArmorItem(ModItems.Mantisite.Armor.HELMET);
-				trimmedArmorItem(ModItems.Mantisite.Armor.CHESTPLATE);
-				trimmedArmorItem(ModItems.Mantisite.Armor.LEGGINGS);
-				trimmedArmorItem(ModItems.Mantisite.Armor.BOOTS);
-				basicItem(ModItems.Mantisite.Armor.HORSE.get());
+//				// basicItem Items
+//				basicItem(ModItems.Mantisite.Resource.RAW.get());
+//				basicItem(ModItems.Mantisite.Resource.INGOT.get());
+//
+//				// handheldItem Items
+//				handheldItem(ModItems.Mantisite.Weapons.SWORD);
+//				handheldItem(ModItems.Mantisite.Tools.AXE);
+//				handheldItem(ModItems.Mantisite.Tools.PICKAXE);
+//				handheldItem(ModItems.Mantisite.Tools.SHOVEL);
+//				handheldItem(ModItems.Mantisite.Tools.HOE);
+//
+//				// Armor
+//				trimmedArmorItem(ModItems.Mantisite.Armor.HELMET);
+//				trimmedArmorItem(ModItems.Mantisite.Armor.CHESTPLATE);
+//				trimmedArmorItem(ModItems.Mantisite.Armor.LEGGINGS);
+//				trimmedArmorItem(ModItems.Mantisite.Armor.BOOTS);
+//				basicItem(ModItems.Mantisite.Armor.HORSE.get());
 				
 				
 				

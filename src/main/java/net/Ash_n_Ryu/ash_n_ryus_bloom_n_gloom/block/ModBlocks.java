@@ -66,6 +66,23 @@ public class ModBlocks {
                         return 0;
                   }
             });
+      public static final DeferredBlock<Block> DEAD_ERNEST_LEAVES = registerBlock("dead_ernest_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                  @Override
+                  public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                        return false;
+                  }
+                  
+                  @Override
+                  public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                        return 0;
+                  }
+                  
+                  @Override
+                  public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                        return 0;
+                  }
+            });
       public static final DeferredBlock<Block> ERNEST_LEAVES = registerBlock("ernest_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
                   @Override
@@ -85,9 +102,11 @@ public class ModBlocks {
             });
       
       public static final DeferredBlock<Block> ERNEST_SAPLING = registerBlock("ernest_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.ALIVE_ERNEST, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+      public static final DeferredBlock<Block> DEAD_ERNEST_SAPLING = registerBlock("dead_ernest_sapling",
             () -> new SaplingBlock(ModTreeGrowers.ERNEST, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
       
-      public static final DeferredBlock<Block> ERNEST_STAIRS = registerBlock("ernest_stairs",
+      public static final DeferredBlock<StairBlock> ERNEST_STAIRS = registerBlock("ernest_stairs",
             () -> new StairBlock(ModBlocks.ERNEST_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
       public static final DeferredBlock<SlabBlock> ERNEST_SLAB = registerBlock("ernest_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
@@ -101,8 +120,6 @@ public class ModBlocks {
             () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
       public static final DeferredBlock<FenceGateBlock> ERNEST_FENCE_GATE = registerBlock("ernest_fence_gate",
             () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
-      public static final DeferredBlock<WallBlock> ERNEST_WALL = registerBlock("ernest_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
       
       public static final DeferredBlock<DoorBlock> ERNEST_DOOR = registerBlock("ernest_door",
             () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));

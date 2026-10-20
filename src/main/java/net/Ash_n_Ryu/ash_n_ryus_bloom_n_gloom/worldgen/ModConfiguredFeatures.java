@@ -9,13 +9,17 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -43,6 +47,7 @@ public class ModConfiguredFeatures {
 		
 		
 		public static final ResourceKey<ConfiguredFeature<?, ?>> ERNEST_KEY = registerKey("ernest");
+		public static final ResourceKey<ConfiguredFeature<?, ?>> ALIVE_ERNEST_KEY = registerKey("alive_ernest");
 		
 		
 		
@@ -65,19 +70,21 @@ public class ModConfiguredFeatures {
 				//          foliage attachment (trunk top + every branch tip)
 				register(context, ERNEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
 						BlockStateProvider.simple(ModBlocks.ERNEST_LOG.get()),
-						new ForkingTrunkPlacer(60, 40, 15),    // 60 + 0..55 = exactly 60-115 blocks
+						new ForkingTrunkPlacer(4, 4, 3),
+						
+						BlockStateProvider.simple(ModBlocks.DEAD_ERNEST_LEAVES.get()),
+						new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+						
+						new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
+				
+				register(context, ALIVE_ERNEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+						BlockStateProvider.simple(ModBlocks.ERNEST_LOG.get()),
+						new ForkingTrunkPlacer(4, 4, 3),
 						
 						BlockStateProvider.simple(ModBlocks.ERNEST_LEAVES.get()),
-						new MegaPineFoliagePlacer(
-								ConstantInt.of(0),                  // radius (spread handled by trunk placer)
-								ConstantInt.of(0),                  // offset
-								ConstantInt.of(13)),                // crown height (layers of leaves per attachment)
+						new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
 						
-						// Lower size 3: needs 3-block radius clear at base (covers the 3x3 trunk)
-						// Upper size 3: needs 3-block radius clear above height 1
-						new TwoLayersFeatureSize(1, 3, 3))
-																					.ignoreVines()
-																					.build());
+						new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 				
 				
 		

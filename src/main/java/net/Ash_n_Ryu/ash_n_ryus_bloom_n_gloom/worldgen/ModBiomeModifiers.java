@@ -72,7 +72,7 @@ public class ModBiomeModifiers {
 				//     ============ ====   == == === == ==   == ==== ============
 				
 				context.register(ADD_TREE_ERNEST, new BiomeModifiers.AddFeaturesBiomeModifier(
-						HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+						HolderSet.direct(biomes.getOrThrow(ModBiomes.BLOOM_GLOOM)),
 						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ERNEST_PLACED_KEY)),
 						GenerationStep.Decoration.VEGETAL_DECORATION
 				));

@@ -27,13 +27,6 @@ public class ModPlacedFeatures {
 		/* ======================= Mantisite ======================= */
 		
 		public static final ResourceKey<PlacedFeature> MANTISITE_ORE_PLACED_KEY = registerKey("mantisite_ore_placed");
-		public static final ResourceKey<PlacedFeature> NETHER_MANTISITE_ORE_PLACED_KEY = registerKey("nether_mantisite_ore_placed");
-		public static final ResourceKey<PlacedFeature> END_MANTISITE_ORE_PLACED_KEY = registerKey("end_mantisite_ore_placed");
-		
-		
-		public static final ResourceKey<PlacedFeature> MYTHRIL_ORE_PLACED_KEY        = registerKey("mythril_ore_placed");
-		public static final ResourceKey<PlacedFeature> NETHER_MYTHRIL_ORE_PLACED_KEY = registerKey("nether_mythril_ore_placed");
-		public static final ResourceKey<PlacedFeature> END_MYTHRIL_ORE_PLACED_KEY    = registerKey("end_mythril_ore_placed");
 		
 		//     ============ ====   == == === == ==   == ==== ============
 		// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
