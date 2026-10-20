@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ash_n_ryus_bloom_n_gloom:block/ernest_door_bottom",
+    "top": "ash_n_ryus_bloom_n_gloom:block/ernest_door_top"
+  }
+}

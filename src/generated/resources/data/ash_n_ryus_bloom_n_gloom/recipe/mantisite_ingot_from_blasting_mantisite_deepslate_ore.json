@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.25,
+  "group": "mantisite",
+  "ingredient": {
+    "item": "ash_n_ryus_bloom_n_gloom:mantisite_deepslate_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "ash_n_ryus_bloom_n_gloom:mantisite_ingot"
+  }
+}

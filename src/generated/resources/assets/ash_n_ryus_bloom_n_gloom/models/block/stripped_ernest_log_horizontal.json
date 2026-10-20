@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "ash_n_ryus_bloom_n_gloom:block/stripped_ernest_log_top",
+    "side": "ash_n_ryus_bloom_n_gloom:block/stripped_ernest_log"
+  }
+}

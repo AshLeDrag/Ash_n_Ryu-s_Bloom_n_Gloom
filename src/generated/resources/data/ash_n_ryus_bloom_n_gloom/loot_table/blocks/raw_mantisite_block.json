@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ash_n_ryus_bloom_n_gloom:raw_mantisite_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ash_n_ryus_bloom_n_gloom:blocks/raw_mantisite_block"
+}
