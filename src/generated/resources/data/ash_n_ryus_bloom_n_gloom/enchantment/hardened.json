@@ -1,0 +1,20 @@
+{
+  "anvil_cost": 6,
+  "description": {
+    "translate": "enchantment.ash_n_ryus_bloom_n_gloom.hardened"
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 5
+  },
+  "max_level": 15,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 5
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#ash_n_ryus_bloom_n_gloom:colossal_enchantable",
+  "weight": 1
+}

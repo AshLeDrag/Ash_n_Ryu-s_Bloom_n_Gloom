@@ -29,7 +29,7 @@ import java.util.Set;
 public class ModEvents {
 		private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
-		
+		@SubscribeEvent
 		public static void renderFog(ViewportEvent.RenderFog event) {
 				Minecraft minecraft = Minecraft.getInstance();
 				

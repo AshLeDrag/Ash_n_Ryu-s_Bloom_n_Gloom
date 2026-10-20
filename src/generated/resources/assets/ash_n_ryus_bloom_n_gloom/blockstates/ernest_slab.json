@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ash_n_ryus_bloom_n_gloom:block/ernest_slab"
+    },
+    "type=double": {
+      "model": "ash_n_ryus_bloom_n_gloom:block/ernest_planks"
+    },
+    "type=top": {
+      "model": "ash_n_ryus_bloom_n_gloom:block/ernest_slab_top"
+    }
+  }
+}

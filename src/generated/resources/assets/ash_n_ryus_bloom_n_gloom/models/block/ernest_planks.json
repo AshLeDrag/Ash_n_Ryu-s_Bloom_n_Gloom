@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ash_n_ryus_bloom_n_gloom:block/ernest_planks"
+  }
+}
