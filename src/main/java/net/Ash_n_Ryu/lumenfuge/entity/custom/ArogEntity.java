@@ -13,7 +13,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class ArogEntity extends Animal {
-    public static final AnimationState idleAnimationState = new AnimationState():
+    public final AnimationState idleAnimationState = new AnimationState():
     private int idleAnimationTimeout = 0;
 
     public ArogEntity(EntityType<? extends Animal> entityType, Level level) {
@@ -43,7 +43,7 @@ public class ArogEntity extends Animal {
 
     @Override
     public @Nullable AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return
+        return null
     }
 
     @Override
@@ -53,8 +53,19 @@ public class ArogEntity extends Animal {
 
     private void setupAnimationState() {
             if(this.idleAnimationTimeout <= 0 ) {
-                this.idleAnimationTimeout =
+                this.idleAnimationTimeout =;
+                this.idleAnimationState.start(this.tickCount);
+            } else {
+                --this.idleAnimationTimeout;
             }
         }
 
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            this.setupAnimationStates();
+        }
+    }
 }
