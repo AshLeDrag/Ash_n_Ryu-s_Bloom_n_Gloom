@@ -67,6 +67,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 				
 				// Saplings
 				saplingItem(ModBlocks.ERNEST_SAPLING);
+				saplingItem(ModBlocks.DEAD_ERNEST_SAPLING);
 		}
 		
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
