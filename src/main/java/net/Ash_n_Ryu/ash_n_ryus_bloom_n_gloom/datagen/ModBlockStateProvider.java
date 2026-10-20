@@ -2,7 +2,6 @@ package net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.datagen;
 
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.Ash_n_Ryus_Bloom_n_Gloom;
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.block.ModBlocks;
-import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.block.custom.RadishCropBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -59,6 +58,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			trapdoorBlockWithRenderType(ModBlocks.ERNEST_TRAPDOOR.get(), modLoc("block/ernest_trapdoor"), true, "cutout");
 			
 			
+			blockItem(ModBlocks.ERNEST_STAIRS);
+			blockItem(ModBlocks.ERNEST_SLAB);
+			blockItem(ModBlocks.ERNEST_PRESSURE_PLATE);
+			blockItem(ModBlocks.ERNEST_FENCE_GATE);
+			blockItem(ModBlocks.ERNEST_TRAPDOOR, "_bottom");
 	}
 	
 	private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
@@ -71,20 +75,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 									  models().singleTexture(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
 																	 "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
 	}
-		
-	public void makeCrop(CropBlock block, String modelName) {
-			Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName);
-			
-			getVariantBuilder(block).forAllStates(function);
-	}
-		
-	private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName) {
-			ConfiguredModel[] models = new ConfiguredModel[1];
-			models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()),
-					ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID, "block/" + modelName + state.getValue(((RadishCropBlock) block).getAgeProperty()))).renderType("cutout"));
-			
-			return models;
-	}
+	
 	
 	public void blockWithItem(DeferredBlock<?> deferredBlock) {
 		simpleBlockWithItem(deferredBlock.get(),cubeAll(deferredBlock.get()));

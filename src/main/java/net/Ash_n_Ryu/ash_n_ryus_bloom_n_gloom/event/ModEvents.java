@@ -27,7 +27,6 @@ import java.util.Set;
 
 @EventBusSubscriber(modid = Ash_n_Ryus_Bloom_n_Gloom.MOD_ID)
 public class ModEvents {
-		private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
 		@SubscribeEvent
 		public static void renderFog(ViewportEvent.RenderFog event) {

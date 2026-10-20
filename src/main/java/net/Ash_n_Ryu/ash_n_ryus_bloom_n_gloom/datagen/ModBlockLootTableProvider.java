@@ -1,7 +1,6 @@
 package net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.datagen;
 
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.block.ModBlocks;
-import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.block.custom.RadishCropBlock;
 import net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
@@ -63,12 +62,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.DEAD_ERNEST_LEAVES.get(), block ->
                                                          createLeavesDrops(block, Blocks.DEAD_BUSH, NORMAL_LEAVES_SAPLING_CHANCES));
         
-        
-        
-        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RADISH_CROP.get())
-                                                                   .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RadishCropBlock.AGE, 3));
-        add(ModBlocks.RADISH_CROP.get(), this.createCropDrops(ModBlocks.RADISH_CROP.get(),
-              ModItems.Foods.RADISH.get(), ModItems.Foods.RADISH_SEEDS.get(), lootItemConditionBuilder));
 
     }
 

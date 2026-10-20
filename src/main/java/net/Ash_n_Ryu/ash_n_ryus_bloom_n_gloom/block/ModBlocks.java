@@ -142,8 +142,6 @@ public class ModBlocks {
       
       // CropBlocks
       
-      public static final DeferredBlock<Block> RADISH_CROP = BLOCKS.register("radish_crop",
-            () -> new RadishCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEETROOTS)));
       
       
       

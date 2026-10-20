@@ -35,7 +35,6 @@ public class ModItems {
 								super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
 						}
 				});
-				public static final DeferredItem<Item> RADISH_SEEDS = ITEMS.register("radish_seeds", () -> new ItemNameBlockItem(ModBlocks.RADISH_CROP.get(), new Item.Properties()));
 		}
 		
 		public static class Mantisite {

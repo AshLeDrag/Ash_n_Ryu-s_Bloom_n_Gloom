@@ -61,6 +61,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 				
 				
 				
+				buttonItem(ModBlocks.ERNEST_BUTTON, ModBlocks.ERNEST_PLANKS);
+				fenceItem(ModBlocks.ERNEST_FENCE, ModBlocks.ERNEST_PLANKS);
+				
+				basicItem(ModBlocks.ERNEST_DOOR.asItem());
+				
 				// Saplings
 				saplingItem(ModBlocks.ERNEST_SAPLING);
 		}
@@ -122,5 +127,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 				return withExistingParent(item.getId().getPath(),
 						ResourceLocation.parse("item/handheld")).texture("layer0",
 						ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,"item/" + item.getId().getPath()));
+		}
+		
+		public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+				this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+						.texture("texture",  ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,
+								"block/" + baseBlock.getId().getPath()));
+		}
+		
+		public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+				this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+						.texture("texture",  ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,
+								"block/" + baseBlock.getId().getPath()));
+		}
+		
+		public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+				this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+						.texture("wall",  ResourceLocation.fromNamespaceAndPath(Ash_n_Ryus_Bloom_n_Gloom.MOD_ID,
+								"block/" + baseBlock.getId().getPath()));
 		}
 }
