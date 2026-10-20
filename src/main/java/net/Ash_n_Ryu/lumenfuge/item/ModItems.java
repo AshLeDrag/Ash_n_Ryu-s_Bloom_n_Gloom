@@ -68,8 +68,6 @@ public class ModItems {
 				
 				public static class Weapons {
 						public static final DeferredItem<SwordItem> SWORD = ITEMS.register("mantisite_sword", () -> new SwordItem(ModToolTiers.MANTISITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.MANTISITE, 5.0f, -2.4f))));
-						
-						public static final DeferredItem<Item> BOW = ITEMS.register("mantisite_bow", () -> new BowItem(new Item.Properties().durability(500)));
 				}
 		}
 		
