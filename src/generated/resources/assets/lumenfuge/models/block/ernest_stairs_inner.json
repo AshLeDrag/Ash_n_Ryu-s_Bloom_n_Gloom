@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "lumenfuge:block/ernest_planks",
+    "side": "lumenfuge:block/ernest_planks",
+    "top": "lumenfuge:block/ernest_planks"
+  }
+}

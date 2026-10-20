@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#lumenfuge:needs_mantisite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

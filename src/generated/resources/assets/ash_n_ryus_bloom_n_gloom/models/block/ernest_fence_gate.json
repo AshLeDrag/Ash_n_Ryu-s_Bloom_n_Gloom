@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fence_gate",
-  "textures": {
-    "texture": "ash_n_ryus_bloom_n_gloom:block/ernest_planks"
-  }
-}

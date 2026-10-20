@@ -21,15 +21,15 @@ license="MIT"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="ash_n_ryus_bloom_n_gloom" #mandatory
+modId="lumenfuge" #mandatory
 
 # The version number of the mod
 version="0.0.1" #mandatory
 
 # A display name for the mod
-displayName="Ash n Ryu's Bloom n Gloom" #mandatory
+displayName="Lumenfuge" #mandatory
 
-classname="net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.Ash_n_Ryus_Bloom_n_Gloom"
+classname="net.Ash_n_Ryu.lumenfuge.Lumenfuge"
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -38,7 +38,7 @@ classname="net.Ash_n_Ryu.ash_n_ryus_bloom_n_gloom.Ash_n_Ryus_Bloom_n_Gloom"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="ash_n_ryus_bloom_n_gloom.png" #optional
+#logoFile="lumenfuge.png" #optional
 
 # A text field displayed in the mod UI
 #credits="" #optional
@@ -63,21 +63,21 @@ A Bloom and Gloom update
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.ash_n_ryus_bloom_n_gloom]] #optional
+[[dependencies.lumenfuge]] #optional
 modId="neoforge"
 type="required"
 versionRange="[21.1,)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.ash_n_ryus_bloom_n_gloom]]
+[[dependencies.lumenfuge]]
 modId="minecraft"
 type="required"
 versionRange="[1.21.1,1.22)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.ash_n_ryus_bloom_n_gloom]]
+[[dependencies.lumenfuge]]
 modId="terrablender"
 type="required"
 versionRange="[4.1.0.8,)"

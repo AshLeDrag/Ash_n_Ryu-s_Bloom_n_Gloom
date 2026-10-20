@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "ash_n_ryus_bloom_n_gloom:bloom_gloom",
-  "features": "ash_n_ryus_bloom_n_gloom:ernest_placed",
-  "step": "vegetal_decoration"
-}

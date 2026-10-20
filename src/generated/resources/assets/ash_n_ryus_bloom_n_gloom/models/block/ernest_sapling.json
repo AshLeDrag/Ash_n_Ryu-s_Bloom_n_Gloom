@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "cross": "ash_n_ryus_bloom_n_gloom:block/ernest_sapling"
-  }
-}

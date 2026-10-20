@@ -1,8 +1,0 @@
-{
-  "remove": [
-    "#ash_n_ryus_bloom_n_gloom:needs_mantisite_tool"
-  ],
-  "values": [
-    "#minecraft:incorrect_for_iron_tool"
-  ]
-}

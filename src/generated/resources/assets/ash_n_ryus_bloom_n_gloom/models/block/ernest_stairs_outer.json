@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "ash_n_ryus_bloom_n_gloom:block/ernest_planks",
-    "side": "ash_n_ryus_bloom_n_gloom:block/ernest_planks",
-    "top": "ash_n_ryus_bloom_n_gloom:block/ernest_planks"
-  }
-}

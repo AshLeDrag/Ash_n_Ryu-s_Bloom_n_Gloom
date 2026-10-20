@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ash_n_ryus_bloom_n_gloom:block/ernest_sapling"
-  }
-}

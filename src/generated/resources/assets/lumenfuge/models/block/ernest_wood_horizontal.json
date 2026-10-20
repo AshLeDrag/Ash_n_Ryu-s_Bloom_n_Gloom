@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "lumenfuge:block/ernest_log",
+    "side": "lumenfuge:block/ernest_log"
+  }
+}

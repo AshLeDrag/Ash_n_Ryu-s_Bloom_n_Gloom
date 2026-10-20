@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lumenfuge:block/ernest_slab"
+    },
+    "type=double": {
+      "model": "lumenfuge:block/ernest_planks"
+    },
+    "type=top": {
+      "model": "lumenfuge:block/ernest_slab_top"
+    }
+  }
+}

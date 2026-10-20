@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "lumenfuge:teleportation_with_colossal_sword",
+      "required": false
+    },
+    {
+      "id": "lumenfuge:gather",
+      "required": false
+    },
+    {
+      "id": "minecraft:loyalty",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+package net.Ash_n_Ryu.lumenfuge.worldgen;
+
+import com.mojang.datafixers.util.Pair;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Climate;
+import terrablender.api.Region;
+import terrablender.api.RegionType;
+
+import java.util.function.Consumer;
+
+public class ModOverworldRegion extends Region {
+		public ModOverworldRegion(ResourceLocation name, int weight) {
+				super(name, RegionType.OVERWORLD, weight);
+		}
+		
+		@Override
+		public void addBiomes(
+				Registry<Biome> registry,
+				Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper
+		) {
+				this.addBiome(mapper, ModBiomes.BLOOM_GLOOM_PARAM, ModBiomes.BLOOM_GLOOM);
+		}
+}

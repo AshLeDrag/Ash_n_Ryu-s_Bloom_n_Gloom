@@ -1,7 +1,7 @@
 {
   "values": [
-    "ash_n_ryus_bloom_n_gloom:mantisite_ore",
-    "ash_n_ryus_bloom_n_gloom:mantisite_deepslate_ore",
-    "ash_n_ryus_bloom_n_gloom:mantisite_block"
+    "lumenfuge:mantisite_ore",
+    "lumenfuge:mantisite_deepslate_ore",
+    "lumenfuge:mantisite_block"
   ]
 }
