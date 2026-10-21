@@ -19,9 +19,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	
 	@Override
 	protected void registerStatesAndModels() {
-			// cubeAll Blocks
-//			blockWithItem(ModBlocks.MANTISITE_DEEPSLATE_ORE);
-//			blockWithItem(ModBlocks.MANTISITE_ORE);
+
 			
 			logBlock(((RotatedPillarBlock) ModBlocks.ERNEST_LOG.get()));
 			axisBlock(((RotatedPillarBlock) ModBlocks.ERNEST_WOOD.get()), blockTexture(ModBlocks.ERNEST_LOG.get()), blockTexture(ModBlocks.ERNEST_LOG.get()));
@@ -34,6 +32,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			blockItem(ModBlocks.STRIPPED_ERNEST_WOOD);
 			
 			blockWithItem(ModBlocks.ERNEST_PLANKS);
+			
+			blockWithItem(ModBlocks.MANTISITE_BLOCK);
 			
 			leavesBlock(ModBlocks.ERNEST_LEAVES);
 			leavesBlock(ModBlocks.DEAD_ERNEST_LEAVES);

@@ -40,36 +40,6 @@ public class ModBiomeModifiers {
 				var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
 				var biomes = context.lookup(Registries.BIOME);
 				
-				
-				//     ============ ====   == == == == ==   == ==== ============
-				// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
-				//     ============ ====   == == == == ==   == ==== ============
-				
-				/* ======================= Mantisite ======================= */
-				
-				context.register(ADD_MANTISITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-						biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANTISITE_ORE_PLACED_KEY)),
-						GenerationStep.Decoration.UNDERGROUND_ORES
-				));
-				// Biome specific example
-				//
-				//	context.register(ADD_MANTISITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-				//			HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
-				//			HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANTISITE_ORE_PLACED_KEY)),
-				//			GenerationStep.Decoration.UNDERGROUND_ORES
-				//	));
-				
-				
-				
-				
-				
-				
-				
-				//     ============ ====   == == === == ==   == ==== ============
-				// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
-				//     ============ ====   == == === == ==   == ==== ============
-				
 				context.register(ADD_TREE_ERNEST, new BiomeModifiers.AddFeaturesBiomeModifier(
 						HolderSet.direct(biomes.getOrThrow(ModBiomes.BLOOM_GLOOM)),
 						HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ERNEST_PLACED_KEY)),

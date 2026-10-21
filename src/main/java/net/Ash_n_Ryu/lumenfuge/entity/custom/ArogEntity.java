@@ -28,7 +28,7 @@ public class ArogEntity extends Animal {
 
         this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
 
-        //this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.MANTISITE_SHARD)));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.MANTISITE_SHARD), false));
 
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 6.0F));
@@ -39,7 +39,7 @@ public class ArogEntity extends Animal {
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 10d)
-                .add(Attributes.MOVEMENT_SPEED, 1.25D)
+                .add(Attributes.MOVEMENT_SPEED, .25D)
                 .add(Attributes.FOLLOW_RANGE, 24D);
     }
 

@@ -25,23 +25,6 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 		
-		//     ============ ====   == == == == ==   == ==== ============
-		// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
-		//     ============ ====   == == == == ==   == ==== ============
-		
-		/* ======================= Mantisite ======================= */
-		
-		public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MANTISITE_ORE_KEY = registerKey("mantisite_ore");
-		
-		
-		
-		
-		
-		//     ============ ====   == == === == ==   == ==== ============
-		// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
-		//     ============ ====   == == === == ==   == ==== ============
-		
-		
 		public static final ResourceKey<ConfiguredFeature<?, ?>> ERNEST_KEY = registerKey("ernest");
 		public static final ResourceKey<ConfiguredFeature<?, ?>> ALIVE_ERNEST_KEY = registerKey("alive_ernest");
 		
@@ -49,21 +32,9 @@ public class ModConfiguredFeatures {
 		
 		public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 				
-				RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
-				RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-				
-				List<OreConfiguration.TargetBlockState> overworldMantisiteOres = List.of(
-						OreConfiguration.target(stoneReplaceables, ModBlocks.MANTISITE_ORE.get().defaultBlockState()),
-						OreConfiguration.target(deepslateReplaceables, ModBlocks.MANTISITE_DEEPSLATE_ORE.get().defaultBlockState()));
-				
-				register(context, OVERWORLD_MANTISITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMantisiteOres, 9));
 				
 				
-				// ── Giant Ernest Sequoia ─────────────────────────────────────────────
-				// Height: 60 + rand(0..55) = 60 to 115 blocks tall (clamped in getTreeHeight)
-				// Trunk:  2x2 logs via GiantSequoiaTrunkPlacer (bypasses vanilla 80-block cap)
-				// Foliage: MegaPineFoliagePlacer gives layered pine-crown rings at each
-				//          foliage attachment (trunk top + every branch tip)
+				
 				register(context, ERNEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
 						BlockStateProvider.simple(ModBlocks.ERNEST_LOG.get()),
 						new ForkingTrunkPlacer(4, 4, 3),

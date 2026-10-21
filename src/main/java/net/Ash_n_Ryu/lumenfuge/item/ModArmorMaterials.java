@@ -29,7 +29,7 @@ public class ModArmorMaterials {
 						attribute.put(ArmorItem.Type.CHESTPLATE,9);
 						attribute.put(ArmorItem.Type.HELMET,5);
 						attribute.put(ArmorItem.Type.BODY,11);
-				}), 30, 3f, 1.1f, () -> ModItems.Mantisite.Resource.INGOT.get());
+				}), 30, 3f, 1.1f, () -> ModItems.MANTISITE_SHARD.get());
 
 		public static Holder<ArmorMaterial> registerStandard(String name, Supplier<Item> ingredientItem) {
 				return register(name, Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {

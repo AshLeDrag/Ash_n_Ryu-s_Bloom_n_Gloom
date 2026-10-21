@@ -21,21 +21,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		@Override
 		protected void buildRecipes(RecipeOutput recipeOutput) {
 				
-				ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.Mantisite.Resource.RAW)
-						.requires(ModItems.Mantisite.Resource.INGOT)
-						.unlockedBy("has_bismuth_block", has(ModItems.Mantisite.Resource.INGOT)).save(recipeOutput);
-				
-				
-				
-				
-				
-				List<ItemLike> MANTISITE_SMELTABLES = List.of(ModItems.Mantisite.Resource.RAW,
-						ModBlocks.MANTISITE_ORE, ModBlocks.MANTISITE_DEEPSLATE_ORE);
-				
-				
-				
-				oreRecipies(recipeOutput, MANTISITE_SMELTABLES, RecipeCategory.MISC, ModItems.Mantisite.Resource.INGOT, ModBlocks.MANTISITE_BLOCK, 0.25f,  600, "mantisite");
-				
+		
 		}
 		
 		

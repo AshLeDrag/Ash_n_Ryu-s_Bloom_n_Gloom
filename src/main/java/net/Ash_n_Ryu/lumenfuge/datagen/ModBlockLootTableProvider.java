@@ -1,7 +1,6 @@
 package net.Ash_n_Ryu.lumenfuge.datagen;
 
 import net.Ash_n_Ryu.lumenfuge.block.ModBlocks;
-import net.Ash_n_Ryu.lumenfuge.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -28,7 +27,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.MANTISITE_BLOCK.get());
-        dropSelf(ModBlocks.RAW_MANTISITE_BLOCK.get());
         
         dropSelf(ModBlocks.ERNEST_LOG.get());
         dropSelf(ModBlocks.ERNEST_WOOD.get());
@@ -50,12 +48,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
               block -> createDoorTable(ModBlocks.ERNEST_DOOR.get()));
         dropSelf(ModBlocks.ERNEST_SAPLING.get());
         dropSelf(ModBlocks.DEAD_ERNEST_SAPLING.get());
-        
-        add(ModBlocks.MANTISITE_ORE.get(),
-              block -> createOreDrop(ModBlocks.MANTISITE_ORE.get(), ModItems.Mantisite.Resource.RAW.get()));
-        add(ModBlocks.MANTISITE_DEEPSLATE_ORE.get(),
-              block -> createMultipleOreDrops(ModBlocks.MANTISITE_DEEPSLATE_ORE.get(), ModItems.Mantisite.Resource.RAW.get(), 2, 5));
-        
         
         
         

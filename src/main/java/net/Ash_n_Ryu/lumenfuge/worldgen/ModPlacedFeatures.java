@@ -20,19 +20,6 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 		
-		//     ============ ====   == == == == ==   == ==== ============
-		// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
-		//     ============ ====   == == == == ==   == ==== ============
-		
-		/* ======================= Mantisite ======================= */
-		
-		public static final ResourceKey<PlacedFeature> MANTISITE_ORE_PLACED_KEY = registerKey("mantisite_ore_placed");
-		
-		//     ============ ====   == == === == ==   == ==== ============
-		// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
-		//     ============ ====   == == === == ==   == ==== ============
-		
-		
 		public static final ResourceKey<PlacedFeature> ERNEST_PLACED_KEY = registerKey("ernest_placed");
 		
 		
@@ -40,24 +27,6 @@ public class ModPlacedFeatures {
 		
 		public static void bootstrap(BootstrapContext<PlacedFeature> context) {
 				var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-				
-				//     ============ ====   == == == == ==   == ==== ============
-				// ============ ==== ==== == == ORES == == ==== ==== ==== ==========
-				//     ============ ====   == == == == ==   == ==== ============
-				
-				/* ======================= Mantisite ======================= */
-				
-				register(context, MANTISITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_MANTISITE_ORE_KEY),
-							ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-				
-				
-				
-				
-				
-				
-				//     ============ ====   == == === == ==   == ==== ============
-				// ============ ==== ==== == == TREES == == ==== ==== ==== ==========
-				//     ============ ====   == == === == ==   == ==== ============
 				
 				
 				register(context, ERNEST_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ERNEST_KEY),

@@ -25,27 +25,27 @@ public class ModItemTagProvider extends ItemTagsProvider {
 				tag(ModTags.Items.COLOSSAL_SWORD_ENCHANTABLE);
 				
 				tag(ItemTags.SWORDS)
-						.add(ModItems.Mantisite.Weapons.SWORD.get());
+						.add(ModItems.MANTISITE_SWORD.get());
 				
 				tag(ItemTags.AXES)
-						.add(ModItems.Mantisite.Tools.AXE.get());
+						.add(ModItems.MANTISITE_AXE.get());
 				
 				tag(ItemTags.PICKAXES)
-						.add(ModItems.Mantisite.Tools.PICKAXE.get());
+						.add(ModItems.MANTISITE_PICKAXE.get());
 				
 				tag(ItemTags.SHOVELS)
-						.add(ModItems.Mantisite.Tools.SHOVEL.get());
+						.add(ModItems.MANTISITE_SHOVEL.get());
 				
 				tag(ItemTags.HOES)
-						.add(ModItems.Mantisite.Tools.HOE.get());
+						.add(ModItems.MANTISITE_HOE.get());
 				
 				tag(ItemTags.TRIDENT_ENCHANTABLE);
 				
 				tag(ItemTags.TRIMMABLE_ARMOR)
-						.add(ModItems.Mantisite.Armor.HELMET.get())
-						.add(ModItems.Mantisite.Armor.CHESTPLATE.get())
-						.add(ModItems.Mantisite.Armor.LEGGINGS.get())
-						.add(ModItems.Mantisite.Armor.BOOTS.get());
+						.add(ModItems.MANTISITE_HELMET.get())
+						.add(ModItems.MANTISITE_CHESTPLATE.get())
+						.add(ModItems.MANTISITE_LEGGINGS.get())
+						.add(ModItems.MANTISITE_BOOTS.get());
 				
 				
 				tag(ItemTags.PLANKS)

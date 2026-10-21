@@ -19,11 +19,6 @@ public class ModDataMapProvider extends DataMapProvider {
 	
 	@Override
 	protected void gather(HolderLookup.Provider provider) {
-		this.builder(NeoForgeDataMaps.FURNACE_FUELS)
-			.add(ModItems.Fuels.STARLIGHT_ASHES.getId(), new FurnaceFuel(1200), false);
-		
-		this.builder(NeoForgeDataMaps.COMPOSTABLES)
-				.add(ModItems.Foods.RADISH.getId(), new Compostable(0.25f), false)
-				.add(ModItems.Foods.RADISH.getId(), new Compostable(0.45f), false);
+	
 	}
 }
