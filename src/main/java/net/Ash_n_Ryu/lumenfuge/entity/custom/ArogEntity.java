@@ -5,9 +5,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -26,11 +28,11 @@ public class ArogEntity extends Animal {
 
         this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
 
-        this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.MANTISITE_SHARD)));
+        //this.goalSelector.addGoal(2, new TemptGoal(this, 1.25, stack -> stack.is(ModItems.MANTISITE_SHARD)));
 
-        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 
     }
 
@@ -53,7 +55,7 @@ public class ArogEntity extends Animal {
 
     private void setupAnimationState() {
             if(this.idleAnimationTimeout <= 0 ) {
-                this.idleAnimationTimeout =;
+                this.idleAnimationTimeout =80;
                 this.idleAnimationState.start(this.tickCount);
             } else {
                 --this.idleAnimationTimeout;
@@ -65,7 +67,7 @@ public class ArogEntity extends Animal {
         super.tick();
 
         if(this.level().isClientSide()) {
-            this.setupAnimationStates();
+            this.setupAnimationState();
         }
     }
 }
