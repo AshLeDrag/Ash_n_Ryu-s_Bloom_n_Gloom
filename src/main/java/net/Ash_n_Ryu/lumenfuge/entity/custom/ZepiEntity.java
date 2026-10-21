@@ -14,11 +14,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class ArogEntity extends Animal {
-    public static final AnimationState idleAnimationState = new AnimationState():
+public class ZepiEntity extends Animal {
+    public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public ArogEntity(EntityType<? extends Animal> entityType, Level level) {
+    public ZepiEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -38,12 +38,12 @@ public class ArogEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 15d)
                 .add(Attributes.MOVEMENT_SPEED, 0.75)
-                .add(Attributes.FOLLOW_RANGE, 24D)
+                .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
     @Override
     public @Nullable AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return
+        return null;
     }
 
     @Override
@@ -51,9 +51,21 @@ public class ArogEntity extends Animal {
         return false;
     }
 
-    private void setupAnimationState() {
+    private void setupAnimationStates() {
         if(this.idleAnimationTimeout <= 0 ) {
-            this.idleAnimationTimeout =
+            this.idleAnimationTimeout =60;
+            this.idleAnimationState.start(this.tickCount);
+        } else {
+            --this.idleAnimationTimeout;
+        }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            this.setupAnimationStates();
         }
     }
 
