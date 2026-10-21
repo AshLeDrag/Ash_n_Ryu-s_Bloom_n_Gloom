@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lumenfuge:block/mantisite_block"
+    }
+  }
+}
