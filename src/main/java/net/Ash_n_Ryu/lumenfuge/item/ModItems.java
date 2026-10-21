@@ -1,10 +1,12 @@
 package net.Ash_n_Ryu.lumenfuge.item;
 
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
+import net.Ash_n_Ryu.lumenfuge.entity.ModEntities;
 import net.Ash_n_Ryu.lumenfuge.item.custom.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -73,6 +75,10 @@ public class ModItems {
 		
 		public static class Resource {
 				public static final DeferredItem<Item> SUPERPEARL = ITEMS.register("super_pearl", () -> new Item(new Item.Properties())); //TODO: make a reusable ender pearl
+
+			public static final DeferredItem<Item> AROG_SPAWN_EGG = ITEMS.register("arog_spawn_egg",
+					() -> new DeferredSpawnEggItem(ModEntities.AROG, 0x174651, 0xbfb8b1,
+							new Item.Properties()));
 		}
 
 		public static void register(

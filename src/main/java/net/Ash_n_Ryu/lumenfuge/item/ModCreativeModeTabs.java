@@ -24,7 +24,7 @@ public class ModCreativeModeTabs {
                                                                                                  output.accept(ModBlocks.MANTISITE_BLOCK);
                                                                                                  output.accept(ModBlocks.MANTISITE_ORE);
                                                                                                  output.accept(ModBlocks.MANTISITE_DEEPSLATE_ORE);
-                                                                                                 output.accept(ModItems.Mantisite.Resource.RAW);
+                                                                                                 output.accept(ModItems.Mantisite.Resource.SHARD);
                                                                                                  output.accept(ModItems.Mantisite.Resource.INGOT);
                                                                                                  output.accept(ModItems.Mantisite.Resource.NUGGET);
                                                                                                  output.accept(ModItems.Mantisite.Weapons.SWORD);
@@ -54,6 +54,9 @@ public class ModCreativeModeTabs {
                                                                                                  output.accept(ModBlocks.ERNEST_FENCE_GATE);
                                                                                                  output.accept(ModBlocks.ERNEST_DOOR);
                                                                                                  output.accept(ModBlocks.ERNEST_TRAPDOOR);
+
+                                                                                                 output.accept(ModItems.Resource.AROG_SPAWN_EGG);
+
                                                                                                  
                                                                                            })).build());
       

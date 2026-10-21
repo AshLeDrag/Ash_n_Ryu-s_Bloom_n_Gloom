@@ -2,6 +2,7 @@ package net.Ash_n_Ryu.lumenfuge.datagen;
 
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
 import net.Ash_n_Ryu.lumenfuge.block.ModBlocks;
+import net.Ash_n_Ryu.lumenfuge.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -41,21 +42,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 		@Override
 		protected void registerModels() {
 //				// basicItem Items
-//				basicItem(ModItems.Mantisite.Resource.RAW.get());
-//				basicItem(ModItems.Mantisite.Resource.INGOT.get());
+				basicItem(ModItems.Mantisite.Resource.SHARD.get());
+				basicItem(ModItems.Mantisite.Resource.INGOT.get());
 //
 //				// handheldItem Items
-//				handheldItem(ModItems.Mantisite.Weapons.SWORD);
-//				handheldItem(ModItems.Mantisite.Tools.AXE);
-//				handheldItem(ModItems.Mantisite.Tools.PICKAXE);
-//				handheldItem(ModItems.Mantisite.Tools.SHOVEL);
-//				handheldItem(ModItems.Mantisite.Tools.HOE);
-//
+				handheldItem(ModItems.Mantisite.Weapons.SWORD);
+				handheldItem(ModItems.Mantisite.Tools.AXE);
+				handheldItem(ModItems.Mantisite.Tools.PICKAXE);
+				handheldItem(ModItems.Mantisite.Tools.SHOVEL);
+			handheldItem(ModItems.Mantisite.Tools.HOE);
+
 //				// Armor
-//				trimmedArmorItem(ModItems.Mantisite.Armor.HELMET);
-//				trimmedArmorItem(ModItems.Mantisite.Armor.CHESTPLATE);
-//				trimmedArmorItem(ModItems.Mantisite.Armor.LEGGINGS);
-//				trimmedArmorItem(ModItems.Mantisite.Armor.BOOTS);
+				trimmedArmorItem(ModItems.Mantisite.Armor.HELMET);
+				trimmedArmorItem(ModItems.Mantisite.Armor.CHESTPLATE);
+				trimmedArmorItem(ModItems.Mantisite.Armor.LEGGINGS);
+				trimmedArmorItem(ModItems.Mantisite.Armor.BOOTS);
 //				basicItem(ModItems.Mantisite.Armor.HORSE.get());
 				
 				
@@ -68,6 +69,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 				// Saplings
 				saplingItem(ModBlocks.ERNEST_SAPLING);
 				saplingItem(ModBlocks.DEAD_ERNEST_SAPLING);
+
+				// Spawn_Eggs
+			withExistingParent(ModItems.Resource.AROG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		}
 		
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
