@@ -2,6 +2,7 @@ package net.Ash_n_Ryu.lumenfuge.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
 import net.Ash_n_Ryu.lumenfuge.entity.custom.ArogEntity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
@@ -17,7 +18,7 @@ import javax.swing.text.html.parser.Entity;
 public class ArogModel {
     public class Arog_Gloom<T extends ArogEntity> extends HierarchicalModel<T> {
         // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "arog-gloom"), "main");
+        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Lumenfuge.MOD_ID, "arog-gloom"), "main");
         private final ModelPart Legs;
         private final ModelPart Head;
         private final ModelPart Body;
@@ -66,8 +67,9 @@ public class ArogModel {
         public void setupAnim(ArogEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
             this.root().getAllParts().forEach(ModelPart::resetPose);
             this.applyHeadRotation(netHeadYaw, headPitch);
-
-
+				
+				this.animateWalk(ArogAnimations.ANIM_AROG_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+				this.animate(entity.idleAnimationState, ArogAnimations.ANIM_AROG_IDLE, ageInTicks, 1f);
         }
 
         private void applyHeadRotation(float headYaw, float headPitch) {
