@@ -53,7 +53,7 @@ public class ArogEntity extends Animal {
 
     private void setupAnimationState() {
             if(this.idleAnimationTimeout <= 0 ) {
-                this.idleAnimationTimeout =;
+                this.idleAnimationTimeout =60;
                 this.idleAnimationState.start(this.tickCount);
             } else {
                 --this.idleAnimationTimeout;
