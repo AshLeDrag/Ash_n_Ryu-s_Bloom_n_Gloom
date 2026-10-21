@@ -38,7 +38,7 @@ public class ModItems {
 		
 		public static class Mantisite {
 				public static class Resource {
-						public static final DeferredItem<Item> RAW = ITEMS.register("raw_mantisite", () -> new Item(new Item.Properties()));
+						public static final DeferredItem<Item> SHARD = ITEMS.register("mantisite_shard", () -> new Item(new Item.Properties()));
 						public static final DeferredItem<Item> INGOT = ITEMS.register("mantisite_ingot", () -> new Item(new Item.Properties()));
 						public static final DeferredItem<Item> NUGGET = ITEMS.register("mantisite_nugget", () -> new Item(new Item.Properties()));
 				}

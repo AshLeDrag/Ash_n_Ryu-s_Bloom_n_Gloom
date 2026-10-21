@@ -5,11 +5,14 @@ import net.Ash_n_Ryu.lumenfuge.block.entity.ModBlockEntities;
 import net.Ash_n_Ryu.lumenfuge.component.ModDataComponents;
 import net.Ash_n_Ryu.lumenfuge.enchantment.ModEnchantmentEffects;
 import net.Ash_n_Ryu.lumenfuge.entity.ModEntities;
+import net.Ash_n_Ryu.lumenfuge.entity.client.ArogRenderer;
 import net.Ash_n_Ryu.lumenfuge.item.ModArmorMaterials;
 import net.Ash_n_Ryu.lumenfuge.item.ModCreativeModeTabs;
 import net.Ash_n_Ryu.lumenfuge.item.ModItems;
 import net.Ash_n_Ryu.lumenfuge.sound.ModSounds;
+import net.Ash_n_Ryu.lumenfuge.util.ModItemProperties;
 import net.Ash_n_Ryu.lumenfuge.worldgen.ModTerraBlender;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -121,7 +124,10 @@ public class Lumenfuge {
     @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {}
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            
+            EntityRenderers.register(ModEntities.AROG.get(), ArogRenderer::new);
+        }
 
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event){}

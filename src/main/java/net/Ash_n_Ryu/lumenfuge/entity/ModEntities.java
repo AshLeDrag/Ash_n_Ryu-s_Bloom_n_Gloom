@@ -14,7 +14,7 @@ public class ModEntities {
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
 			DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, Lumenfuge.MOD_ID);
 
-	public static final Supplier<EntityType<ArogEntity>> Arog =
+	public static final Supplier<EntityType<ArogEntity>> AROG =
 			ENTITY_TYPES.register("arog", () ->  EntityType.Builder.of(ArogEntity::new, MobCategory.CREATURE)
 					.sized( 8f, 18.65f).build("arog"));
 
