@@ -27,9 +27,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 				tag(ItemTags.SWORDS)
 						.add(ModItems.Mantisite.Weapons.SWORD.get());
 				
-				tag(ItemTags.BOW_ENCHANTABLE)
-						.add(ModItems.Mantisite.Weapons.BOW.get());
-				
 				tag(ItemTags.AXES)
 						.add(ModItems.Mantisite.Tools.AXE.get());
 				

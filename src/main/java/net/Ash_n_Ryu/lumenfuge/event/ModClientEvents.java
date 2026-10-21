@@ -14,7 +14,7 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 public class ModClientEvents {
 		@SubscribeEvent
 		public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {
-				if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.Mantisite.Weapons.BOW.get()) {
+				if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.Mantisite.Weapons.SWORD.get()) {
 						float fovModifier = 1f;
 						int ticksUsingItem = event.getPlayer().getTicksUsingItem();
 						float deltaTicks = (float)ticksUsingItem / 20f;
