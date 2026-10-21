@@ -144,14 +144,4 @@ public class Lumenfuge {
     }
 }
 
-// ================================================ TODOS ================================================ \\
 
-/*
- * TODO: Make zworb (zombie sword) that spawns zombies which attack enemies
- * TODO: Make a Breader (block) that transforms breadinium and milk into dough
- *
- *
- *
- *
- */
- 
