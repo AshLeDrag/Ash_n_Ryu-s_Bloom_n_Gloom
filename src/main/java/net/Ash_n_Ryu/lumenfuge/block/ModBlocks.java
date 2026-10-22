@@ -26,13 +26,7 @@ public class ModBlocks {
       
       
       
-      public static final DeferredBlock<Block> MANTISITE_ORE = registerBlock("mantisite_ore",
-            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      public static final DeferredBlock<Block> MANTISITE_DEEPSLATE_ORE = registerBlock("mantisite_deepslate_ore",
-            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
       public static final DeferredBlock<Block> MANTISITE_BLOCK = registerBlock("mantisite_block",
-            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      public static final DeferredBlock<Block> RAW_MANTISITE_BLOCK = registerBlock("raw_mantisite_block",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
       
       
@@ -125,25 +119,6 @@ public class ModBlocks {
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
       public static final DeferredBlock<TrapDoorBlock> ERNEST_TRAPDOOR = registerBlock("ernest_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      // CropBlocks
-      
-      
-      
       
       
       

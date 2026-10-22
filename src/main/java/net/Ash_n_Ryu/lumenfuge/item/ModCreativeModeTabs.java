@@ -18,25 +18,21 @@ public class ModCreativeModeTabs {
       public static final Supplier<CreativeModeTab> LUMENFUGE = CREATIVE_MODE_TAB
                                                                          .register("lumenfuge",
                                                                                () -> CreativeModeTab.builder()
-                                                                                           .icon(() -> new ItemStack(ModItems.Mantisite.Tools.AXE.get()))
+                                                                                           .icon(() -> new ItemStack(ModItems.MANTISITE_AXE.get()))
                                                                                            .title(Component.translatable("creativetab.lumenfuge"))
                                                                                            .displayItems(((itemDisplayParameters, output) -> {
                                                                                                  output.accept(ModBlocks.MANTISITE_BLOCK);
-                                                                                                 output.accept(ModBlocks.MANTISITE_ORE);
-                                                                                                 output.accept(ModBlocks.MANTISITE_DEEPSLATE_ORE);
-                                                                                                 output.accept(ModItems.Mantisite.Resource.SHARD);
-                                                                                                 output.accept(ModItems.Mantisite.Resource.INGOT);
-                                                                                                 output.accept(ModItems.Mantisite.Resource.NUGGET);
-                                                                                                 output.accept(ModItems.Mantisite.Weapons.SWORD);
-                                                                                                 output.accept(ModItems.Mantisite.Tools.AXE);
-                                                                                                 output.accept(ModItems.Mantisite.Tools.PICKAXE);
-                                                                                                 output.accept(ModItems.Mantisite.Tools.SHOVEL);
-                                                                                                 output.accept(ModItems.Mantisite.Tools.HOE);
-                                                                                                 output.accept(ModItems.Mantisite.Armor.HELMET);
-                                                                                                 output.accept(ModItems.Mantisite.Armor.CHESTPLATE);
-                                                                                                 output.accept(ModItems.Mantisite.Armor.LEGGINGS);
-                                                                                                 output.accept(ModItems.Mantisite.Armor.BOOTS);
-                                                                                                 output.accept(ModItems.Mantisite.Armor.HORSE);
+                                                                                                 output.accept(ModItems.MANTISITE_SHARD);
+                                                                                                 output.accept(ModItems.MANTISITE_SWORD);
+                                                                                                 output.accept(ModItems.MANTISITE_AXE);
+                                                                                                 output.accept(ModItems.MANTISITE_PICKAXE);
+                                                                                                 output.accept(ModItems.MANTISITE_SHOVEL);
+                                                                                                 output.accept(ModItems.MANTISITE_HOE);
+                                                                                                 output.accept(ModItems.MANTISITE_HELMET);
+                                                                                                 output.accept(ModItems.MANTISITE_CHESTPLATE);
+                                                                                                 output.accept(ModItems.MANTISITE_LEGGINGS);
+                                                                                                 output.accept(ModItems.MANTISITE_BOOTS);
+                                                                                                 output.accept(ModItems.MANTISITE_HORSE);
                                                                                                  output.accept(ModBlocks.ERNEST_LOG);
                                                                                                  output.accept(ModBlocks.STRIPPED_ERNEST_LOG);
                                                                                                  output.accept(ModBlocks.ERNEST_WOOD);
@@ -55,7 +51,7 @@ public class ModCreativeModeTabs {
                                                                                                  output.accept(ModBlocks.ERNEST_DOOR);
                                                                                                  output.accept(ModBlocks.ERNEST_TRAPDOOR);
 
-                                                                                                 output.accept(ModItems.Resource.AROG_SPAWN_EGG);
+                                                                                                 output.accept(ModItems.AROG_SPAWN_EGG);
 
                                                                                                  
                                                                                            })).build());

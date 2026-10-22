@@ -16,9 +16,7 @@ public class ModEntities {
 
 	public static final Supplier<EntityType<ArogEntity>> AROG =
 			ENTITY_TYPES.register("arog", () ->  EntityType.Builder.of(ArogEntity::new, MobCategory.CREATURE)
-					.sized( 8f, 18.65f).build("arog"));
+					.sized( 0.5f, 1.17f).build("arog"));
 
-	public static void register(IEventBus eventBus) {
-		ENTITY_TYPES.register(eventBus);
-	}
+	public static void register(IEventBus eventBus) {ENTITY_TYPES.register(eventBus);}
 }

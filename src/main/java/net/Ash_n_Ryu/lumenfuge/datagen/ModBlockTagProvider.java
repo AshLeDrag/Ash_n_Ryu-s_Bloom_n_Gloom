@@ -20,7 +20,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
 			tag(BlockTags.MINEABLE_WITH_PICKAXE)
-					.add(ModBlocks.MANTISITE_ORE.get(), ModBlocks.MANTISITE_DEEPSLATE_ORE.get(), ModBlocks.MANTISITE_BLOCK.get());
+					.add(ModBlocks.MANTISITE_BLOCK.get());
 				
 				
 				
@@ -30,7 +30,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 				
 					
 			tag(BlockTags.NEEDS_IRON_TOOL)
-					.add(ModBlocks.MANTISITE_ORE.get(), ModBlocks.MANTISITE_DEEPSLATE_ORE.get(), ModBlocks.MANTISITE_BLOCK.get());
+					.add(ModBlocks.MANTISITE_BLOCK.get());
 				
 			tag(ModTags.Blocks.NEEDS_MANTISITE_TOOL)
 					.addTag(BlockTags.NEEDS_IRON_TOOL);

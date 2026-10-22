@@ -41,23 +41,22 @@ public class ModItemModelProvider extends ItemModelProvider {
 		
 		@Override
 		protected void registerModels() {
-//				// basicItem Items
-				basicItem(ModItems.Mantisite.Resource.SHARD.get());
-				basicItem(ModItems.Mantisite.Resource.INGOT.get());
-//
-//				// handheldItem Items
-				handheldItem(ModItems.Mantisite.Weapons.SWORD);
-				handheldItem(ModItems.Mantisite.Tools.AXE);
-				handheldItem(ModItems.Mantisite.Tools.PICKAXE);
-				handheldItem(ModItems.Mantisite.Tools.SHOVEL);
-			handheldItem(ModItems.Mantisite.Tools.HOE);
-
-//				// Armor
-				trimmedArmorItem(ModItems.Mantisite.Armor.HELMET);
-				trimmedArmorItem(ModItems.Mantisite.Armor.CHESTPLATE);
-				trimmedArmorItem(ModItems.Mantisite.Armor.LEGGINGS);
-				trimmedArmorItem(ModItems.Mantisite.Armor.BOOTS);
-//				basicItem(ModItems.Mantisite.Armor.HORSE.get());
+				//				// basicItem Items
+				basicItem(ModItems.MANTISITE_SHARD.get());
+				//
+				//				// handheldItem Items
+				handheldItem(ModItems.MANTISITE_SWORD);
+				handheldItem(ModItems.MANTISITE_AXE);
+				handheldItem(ModItems.MANTISITE_PICKAXE);
+				handheldItem(ModItems.MANTISITE_SHOVEL);
+				handheldItem(ModItems.MANTISITE_HOE);
+				
+				//				// Armor
+				trimmedArmorItem(ModItems.MANTISITE_HELMET);
+				trimmedArmorItem(ModItems.MANTISITE_CHESTPLATE);
+				trimmedArmorItem(ModItems.MANTISITE_LEGGINGS);
+				trimmedArmorItem(ModItems.MANTISITE_BOOTS);
+				//				basicItem(ModItems.MANTISITE_HORSE.get());
 				
 				
 				
@@ -69,9 +68,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 				// Saplings
 				saplingItem(ModBlocks.ERNEST_SAPLING);
 				saplingItem(ModBlocks.DEAD_ERNEST_SAPLING);
-
+				
 				// Spawn_Eggs
-			withExistingParent(ModItems.Resource.AROG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+				withExistingParent(ModItems.AROG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		}
 		
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
