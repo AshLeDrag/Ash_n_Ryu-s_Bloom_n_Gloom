@@ -1,5 +1,37 @@
 {
   
-  "creativetab.lumenfuge": "Lumenfuge"
+  "creativetab.lumenfuge": "Lumenfuge",
+
+  "block.lumenfuge.mantisite_block": "Mantisite Block",
+  "block.lumenfuge.ernest_log": "Ernest Log",
+  "block.lumenfuge.stripped_ernest_log": "Stripped Ernest Log",
+  "block.lumenfuge.ernest_wood": "Ernest Wood",
+  "block.lumenfuge.stripped_ernest_wood": "Stripped Ernest Wood",
+  "block.lumenfuge.dead_ernest_leaves": "Dead Ernest Leaves",
+  "block.lumenfuge.ernest_leaves": "Ernest Leaves",
+  "block.lumenfuge.ernest_planks": "Ernest Planks",
+  "block.lumenfuge.ernest_stairs": "Ernest Stairs",
+  "block.lumenfuge.ernest_slab": "Ernest Slab",
+  "block.lumenfuge.ernest_pressure_plate": "Ernest Pressure Plate",
+  "block.lumenfuge.ernest_button": "Ernest Button",
+  "block.lumenfuge.ernest_fence": "Ernest Fence",
+  "block.lumenfuge.ernest_fence_gate": "Ernest Fence gate",
+  "block.lumenfuge.ernest_door": "Ernest Door",
+  "block.lumenfuge.ernest_trapdoor": "Ernest Trapdoor",
+  "block.lumenfuge.ernest_sapling": "Ernest Sapling",
+  "block.lumenfuge.dead_ernest_sapling": "Dead Ernest Sapling",
+  "item.lumenfuge.mantisite_shard": "Mantisite Shard",
+  "item.lumenfuge.mantisite_sword": "Mantisite Sword",
+  "item.lumenfuge.mantisite_axe": "Mantisite Axe",
+  "item.lumenfuge.mantisite_pickaxe": "Mantisite Pickaxe",
+  "item.lumenfuge.mantisite_shovel": "Mantisite Shovel",
+  "item.lumenfuge.mantisite_hoe": "Mantisite Hoe",
+  "item.lumenfuge.mantisite_helmet": "Mantisite Helmet",
+  "item.lumenfuge.mantisite_chestplate": "Mantisite Chestplate",
+  "item.lumenfuge.mantisite_leggings": "Mantisite Leggings",
+  "item.lumenfuge.mantisite_boots": "Mantisite Boots",
+  "item.lumenfuge.mantisite_horse_armor": "Mantisite Horse Armor",
+  "item.lumenfuge.arog_spawn_egg": "Arog Spawn Egg",
+  "item.lumenfuge.zepi_spawn_egg": "Zepi Spawn Egg"
 
 }

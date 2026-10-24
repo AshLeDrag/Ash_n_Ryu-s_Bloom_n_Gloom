@@ -56,7 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 				trimmedArmorItem(ModItems.MANTISITE_CHESTPLATE);
 				trimmedArmorItem(ModItems.MANTISITE_LEGGINGS);
 				trimmedArmorItem(ModItems.MANTISITE_BOOTS);
-				//				basicItem(ModItems.MANTISITE_HORSE.get());
+				basicItem(ModItems.MANTISITE_HORSE.get());
 				
 				
 				

@@ -22,7 +22,7 @@ public class ModArmorMaterials {
 		public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS =
 				DeferredRegister.create(Registries.ARMOR_MATERIAL, Lumenfuge.MOD_ID);
 
-		public static final Holder<ArmorMaterial> MANTISITE_ARMOR_MATERIAL = register("breadinium",
+		public static final Holder<ArmorMaterial> MANTISITE_ARMOR_MATERIAL = register("mantisite",
 				Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
 						attribute.put(ArmorItem.Type.BOOTS,5);
 						attribute.put(ArmorItem.Type.LEGGINGS,7);
