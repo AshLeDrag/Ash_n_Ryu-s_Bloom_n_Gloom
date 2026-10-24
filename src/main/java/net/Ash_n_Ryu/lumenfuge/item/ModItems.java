@@ -54,6 +54,10 @@ public class ModItems {
 				() -> new DeferredSpawnEggItem(ModEntities.AROG, 0x174651, 0xbfb8b1,
 						new Item.Properties()));
 		
+		public static final DeferredItem<Item> ZEPI_SPAWN_EGG = ITEMS.register("zepi_spawn_egg",
+				() -> new DeferredSpawnEggItem(ModEntities.ZEPI, 0x081f40, 0xef9c1c,
+						new Item.Properties()));
+		
 		
 		public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
 }

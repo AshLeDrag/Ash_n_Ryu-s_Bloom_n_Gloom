@@ -52,6 +52,7 @@ public class ModCreativeModeTabs {
                                                                                                  output.accept(ModBlocks.ERNEST_TRAPDOOR);
 
                                                                                                  output.accept(ModItems.AROG_SPAWN_EGG);
+                                                                                                 output.accept(ModItems.ZEPI_SPAWN_EGG);
 
                                                                                                  
                                                                                            })).build());

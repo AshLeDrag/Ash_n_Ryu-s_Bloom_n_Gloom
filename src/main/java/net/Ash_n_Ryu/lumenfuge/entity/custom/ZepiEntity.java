@@ -1,44 +1,64 @@
 package net.Ash_n_Ryu.lumenfuge.entity.custom;
 
 import net.Ash_n_Ryu.lumenfuge.item.ModItems;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class ZepiEntity extends Animal {
-    public static final AnimationState idleAnimationState = new AnimationState();
+import java.util.UUID;
+
+public class ZepiEntity extends Animal implements NeutralMob {
+    public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME =
+          SynchedEntityData.defineId(ZepiEntity.class, EntityDataSerializers.INT);
+    private static final UniformInt PERSISTENT_ANGER_TIME = null;
+    @Nullable
+    private UUID persistentAngerTarget;
 
     public ZepiEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
+    }
+    
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(DATA_REMAINING_ANGER_TIME, 0);
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-
-        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0));
-
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0D, true));
+        this.goalSelector.addGoal(2, new MoveTowardsTargetGoal(this, 1.2D, 32.0F));
+        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 6.0F));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(0, new HurtByTargetGoal(this));
 
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 15d)
-                .add(Attributes.MOVEMENT_SPEED, 0.75)
-                .add(Attributes.FOLLOW_RANGE, 24D);
+                     .add(Attributes.MAX_HEALTH, 15d)
+                     .add(Attributes.MOVEMENT_SPEED, 0.15D)
+                     .add(Attributes.FOLLOW_RANGE, 24D)
+                     .add(Attributes.ATTACK_DAMAGE, 4.0D);
     }
 
     @Override
@@ -67,6 +87,29 @@ public class ZepiEntity extends Animal {
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
         }
+    }
+    
+    
+    
+    public int getRemainingPersistentAngerTime() {
+        return (Integer)this.entityData.get(DATA_REMAINING_ANGER_TIME);
+    }
+    
+    public void setRemainingPersistentAngerTime(int time) {
+        this.entityData.set(DATA_REMAINING_ANGER_TIME, time);
+    }
+    
+    public void startPersistentAngerTimer() {
+        this.setRemainingPersistentAngerTime(PERSISTENT_ANGER_TIME.sample(this.random));
+    }
+    
+    @javax.annotation.Nullable
+    public UUID getPersistentAngerTarget() {
+        return this.persistentAngerTarget;
+    }
+    
+    public void setPersistentAngerTarget(@javax.annotation.Nullable UUID target) {
+        this.persistentAngerTarget = target;
     }
 
 }
