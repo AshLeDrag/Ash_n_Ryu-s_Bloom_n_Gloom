@@ -71,6 +71,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 				
 				// Spawn_Eggs
 				withExistingParent(ModItems.AROG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+		
+				withExistingParent(ModItems.ZEPI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 		}
 		
 		private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

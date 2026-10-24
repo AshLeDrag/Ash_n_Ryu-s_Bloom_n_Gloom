@@ -2,6 +2,7 @@ package net.Ash_n_Ryu.lumenfuge.entity;
 
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
 import net.Ash_n_Ryu.lumenfuge.entity.custom.ArogEntity;
+import net.Ash_n_Ryu.lumenfuge.entity.custom.ZepiEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -17,6 +18,9 @@ public class ModEntities {
 	public static final Supplier<EntityType<ArogEntity>> AROG =
 			ENTITY_TYPES.register("arog", () ->  EntityType.Builder.of(ArogEntity::new, MobCategory.CREATURE)
 					.sized( 0.5f, 1.17f).build("arog"));
+	public static final Supplier<EntityType<ZepiEntity>> ZEPI =
+			ENTITY_TYPES.register("zepi", () ->  EntityType.Builder.of(ZepiEntity::new, MobCategory.CREATURE)
+					.sized( 10f/16f, 10f/16f).build("zepi"));
 
 	public static void register(IEventBus eventBus) {ENTITY_TYPES.register(eventBus);}
 }

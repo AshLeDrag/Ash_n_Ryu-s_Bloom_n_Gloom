@@ -1,0 +1,18 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "lumenfuge:bloom_gloom",
+  "spawners": [
+    {
+      "type": "lumenfuge:arog",
+      "maxCount": 4,
+      "minCount": 2,
+      "weight": 20
+    },
+    {
+      "type": "lumenfuge:zepi",
+      "maxCount": 4,
+      "minCount": 2,
+      "weight": 20
+    }
+  ]
+}
