@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:stick"
+    },
+    "M": {
+      "item": "lumenfuge:mantisite_shard"
+    }
+  },
+  "pattern": [
+    "MM",
+    "MB",
+    " B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumenfuge:mantisite_axe"
+  }
+}

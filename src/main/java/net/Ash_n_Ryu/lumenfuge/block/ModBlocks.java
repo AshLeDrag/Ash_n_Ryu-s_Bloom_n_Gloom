@@ -126,7 +126,7 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noOcclusion()));
       
       public static final DeferredBlock<Block> EtheBlock = registerBlock("etheral_knight_block",
-            () -> new EtheBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new EtheBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable().strength(-1.0F, 3600000.0F).isValidSpawn(Blocks::never)));
       
       
       

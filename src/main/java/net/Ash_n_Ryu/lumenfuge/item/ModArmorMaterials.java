@@ -30,16 +30,6 @@ public class ModArmorMaterials {
 						attribute.put(ArmorItem.Type.HELMET,5);
 						attribute.put(ArmorItem.Type.BODY,11);
 				}), 30, 3f, 1.1f, () -> ModItems.MANTISITE_SHARD.get());
-
-		public static Holder<ArmorMaterial> registerStandard(String name, Supplier<Item> ingredientItem) {
-				return register(name, Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-						attribute.put(ArmorItem.Type.BOOTS, 5);
-						attribute.put(ArmorItem.Type.LEGGINGS, 7);
-						attribute.put(ArmorItem.Type.CHESTPLATE, 9);
-						attribute.put(ArmorItem.Type.HELMET, 5);
-						attribute.put(ArmorItem.Type.BODY, 11);
-				}), 30, 3f, 1.1f, ingredientItem);
-		}
 		
 		private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
 				int enchantability, float toughness, float knockbackResistance,

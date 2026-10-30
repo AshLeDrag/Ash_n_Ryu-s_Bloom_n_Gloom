@@ -6,6 +6,7 @@ import net.Ash_n_Ryu.lumenfuge.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -20,7 +21,110 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		
 		@Override
 		protected void buildRecipes(RecipeOutput recipeOutput) {
-				//ShapedRecipeBuilder.shaped()
+				ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MANTISITE_PICKAXE.get())
+						.pattern("MMM")
+						.pattern(" B ")
+						.pattern(" B ")
+						.define('B', Items.STICK )
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MANTISITE_AXE.get())
+						.pattern("MM")
+						.pattern("MB")
+						.pattern(" B")
+						.define('B', Items.STICK )
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MANTISITE_HOE.get())
+						.pattern("MM")
+						.pattern("B ")
+						.pattern("B ")
+						.define('B', Items.STICK )
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MANTISITE_SWORD.get())
+						.pattern("M")
+						.pattern("M")
+						.pattern("B")
+						.define('B', Items.STICK )
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MANTISITE_SHOVEL.get())
+						.pattern("M")
+						.pattern("B")
+						.pattern("B")
+						.define('B', Items.STICK )
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MANTISITE_BLOCK.get())
+						.pattern("MMM")
+						.pattern("MMM")
+						.pattern("MMM")
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MANTISITE_SHARD.get(), 9)
+						.requires(ModBlocks.MANTISITE_BLOCK.get())
+						.unlockedBy("has_" + getItemName(ModBlocks.MANTISITE_BLOCK.get()), has(ModBlocks.MANTISITE_BLOCK.get())).save(recipeOutput);
+				
+				
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MANTISITE_HELMET.get())
+						.pattern("MMM")
+						.pattern("M M")
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MANTISITE_CHESTPLATE.get())
+						.pattern("M M")
+						.pattern("MMM")
+						.pattern("MMM")
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MANTISITE_LEGGINGS.get())
+						.pattern("MMM")
+						.pattern("M M")
+						.pattern("M M")
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				
+				ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MANTISITE_BOOTS.get())
+						.pattern("M M")
+						.pattern("M M")
+						.define('M', ModItems.MANTISITE_SHARD.get())
+						.unlockedBy("has_mantisite_shard", has(ModItems.MANTISITE_SHARD.get())).save(recipeOutput);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 		
 		}
 		

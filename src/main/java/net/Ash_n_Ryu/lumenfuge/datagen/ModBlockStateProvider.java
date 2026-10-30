@@ -57,6 +57,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			
 			
 			
+			blockItem(ModBlocks.EtheBlock);
 			blockItem(ModBlocks.ERNEST_STAIRS);
 			blockItem(ModBlocks.ERNEST_SLAB);
 			blockItem(ModBlocks.ERNEST_PRESSURE_PLATE);

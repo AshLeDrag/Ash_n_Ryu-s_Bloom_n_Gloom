@@ -43,6 +43,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 		protected void registerModels() {
 				//				// basicItem Items
 				basicItem(ModItems.MANTISITE_SHARD.get());
+				basicItem(ModItems.ETHERAL_KEY.get());
+				basicItem(ModItems.ETHERAL_KEY_BLADE.get());
+				basicItem(ModItems.ETHERAL_KEY_BOW.get());
+				basicItem(ModItems.ETHERAL_KEY_TOOTH.get());
 				//
 				//				// handheldItem Items
 				handheldItem(ModItems.MANTISITE_SWORD);

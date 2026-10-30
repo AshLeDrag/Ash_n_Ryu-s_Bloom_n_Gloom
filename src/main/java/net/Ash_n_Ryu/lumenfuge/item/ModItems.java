@@ -29,6 +29,10 @@ public class ModItems {
 		
 		public static final DeferredItem<Item> ETHERAL_KEY = ITEMS.register("etheral_key", () -> new Item(new Item.Properties()));
 		
+		public static final DeferredItem<Item> ETHERAL_KEY_BLADE = ITEMS.register("etheral_key_blade", () -> new Item(new Item.Properties()));
+		public static final DeferredItem<Item> ETHERAL_KEY_TOOTH = ITEMS.register("etheral_key_tooth", () -> new Item(new Item.Properties()));
+		public static final DeferredItem<Item> ETHERAL_KEY_BOW = ITEMS.register("etheral_key_bow", () -> new Item(new Item.Properties()));
+		
 		
 		
 		

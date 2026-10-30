@@ -30,7 +30,6 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -40,6 +39,20 @@ import java.util.List;
 
 public class EtheBlock extends HorizontalDirectionalBlock {
 		public static final MapCodec<EtheBlock> CODEC = simpleCodec(EtheBlock::new);
+        private static final VoxelShape NORTH_SHAPE = Shapes.or(
+                Block.box(0.5, 0, 1.5, 15.5, 11, 14.5),
+                Block.box(-10, 9.5, 7, 26, 11.5, 9));
+        private static final VoxelShape EAST_SHAPE = rotateClockwise(NORTH_SHAPE);
+        private static final VoxelShape SOUTH_SHAPE = rotateClockwise(EAST_SHAPE);
+        private static final VoxelShape WEST_SHAPE = rotateClockwise(SOUTH_SHAPE);
+
+        private static VoxelShape rotateClockwise(VoxelShape shape) {
+            VoxelShape[] result = {Shapes.empty()};
+            shape.forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) ->
+                    result[0] = Shapes.or(result[0], Shapes.box(
+                            1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
+            return result[0].optimize();
+        }
 		
 		public EtheBlock(Properties properties) {
 				super(properties);
@@ -47,12 +60,18 @@ public class EtheBlock extends HorizontalDirectionalBlock {
 		
 		@Override
 		protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-				
-				VoxelShape shape = Shapes.empty();
-				shape = Shapes.join(shape, Block.box(0.5, 0, 1.5, 15.5, 11, 14.5), BooleanOp.OR);
-				
-				return shape;
+                return switch (state.getValue(FACING)) {
+                    case EAST -> EAST_SHAPE;
+                    case SOUTH -> SOUTH_SHAPE;
+                    case WEST -> WEST_SHAPE;
+                    default -> NORTH_SHAPE;
+                };
 		}
+
+        @Override
+        protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+            return getShape(state, level, pos, context);
+        }
 		
 		@Override
 		protected MapCodec<? extends HorizontalDirectionalBlock> codec() {

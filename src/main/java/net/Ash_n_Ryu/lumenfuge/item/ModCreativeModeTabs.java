@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
       public static final Supplier<CreativeModeTab> LUMENFUGE = CREATIVE_MODE_TAB
                                                                          .register("lumenfuge",
                                                                                () -> CreativeModeTab.builder()
-                                                                                           .icon(() -> new ItemStack(ModItems.MANTISITE_AXE.get()))
+                                                                                           .icon(() -> new ItemStack(ModBlocks.EtheBlock.get()))
                                                                                            .title(Component.translatable("creativetab.lumenfuge"))
                                                                                            .displayItems(((itemDisplayParameters, output) -> {
                                                                                                  output.accept(ModBlocks.MANTISITE_BLOCK);
@@ -50,7 +50,14 @@ public class ModCreativeModeTabs {
                                                                                                  output.accept(ModBlocks.ERNEST_FENCE_GATE);
                                                                                                  output.accept(ModBlocks.ERNEST_DOOR);
                                                                                                  output.accept(ModBlocks.ERNEST_TRAPDOOR);
-
+                                                                                                 
+                                                                                                 
+                                                                                                 output.accept(ModBlocks.EtheBlock);
+                                                                                                 output.accept(ModItems.ETHERAL_KEY);
+                                                                                                 output.accept(ModItems.ETHERAL_KEY_BOW);
+                                                                                                 output.accept(ModItems.ETHERAL_KEY_BLADE);
+                                                                                                 output.accept(ModItems.ETHERAL_KEY_TOOTH);
+                                                                                                 
                                                                                                  output.accept(ModItems.AROG_SPAWN_EGG);
                                                                                                  output.accept(ModItems.ZEPI_SPAWN_EGG);
 

@@ -63,12 +63,12 @@ public class EtheralKnightEntity extends Monster {
         private float previousWalkBlend;
         private int attackCooldown;
         private static final double MOVEMENT_SPEED = 0.08D;
-        private static final double PHASE_ONE_DAMAGE = 4.0D;
-        private static final double PHASE_TWO_DAMAGE = 8.0D;
-        private static final double SLAM_RADIUS = 4.0D;
+        private static final double PHASE_ONE_DAMAGE = 9.0D;
+        private static final double PHASE_TWO_DAMAGE = 18.0D;
+        private static final double SLAM_RADIUS = 7.0D;
 
         private boolean isInStrikeRange(LivingEntity target) {
-            double reach = getPhase() == PHASE_TWO ? 4.0D : 3.5D;
+            double reach = getPhase() == PHASE_TWO ? 5.0D : 4.0D;
             return distanceToSqr(target) <= reach * reach;
         }
 
@@ -136,7 +136,7 @@ public class EtheralKnightEntity extends Monster {
             if (!(level() instanceof ServerLevel server)) return;
             float damage = (float) getAttributeValue(Attributes.ATTACK_DAMAGE) * 2F;
             for (LivingEntity victim : server.getEntitiesOfClass(LivingEntity.class,
-                    getBoundingBox().inflate(SLAM_RADIUS, 2, SLAM_RADIUS))) {
+                    getBoundingBox().inflate(SLAM_RADIUS, SLAM_RADIUS , SLAM_RADIUS))) {
                 double dx = victim.getX() - getX();
                 double dz = victim.getZ() - getZ();
                 if (victim == this || victim instanceof EtheralKnightEntity || !victim.isAlive()
@@ -289,6 +289,7 @@ public class EtheralKnightEntity extends Monster {
                 });
 				this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
 				this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+                this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, Player.class, true));
 				this.targetSelector.addGoal(1, new HurtByTargetGoal(this, new Class[0]));
 				this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, LivingEntity.class, 0, false, false, LIVING_ENTITY_SELECTOR));
 		}
@@ -441,14 +442,20 @@ public class EtheralKnightEntity extends Monster {
                     getBoundingBox().inflate(range))) {
                 if (!conditions.test(this, candidate) || !isWithinRestriction(candidate.blockPosition())) continue;
                 double distance = distanceToSqr(candidate);
-                if (distance < nearestDistance) {
+                boolean candidateIsPlayer = candidate instanceof Player;
+                boolean nearestIsPlayer = nearest instanceof Player;
+                if (nearest == null || (candidateIsPlayer && !nearestIsPlayer)
+                        || (candidateIsPlayer == nearestIsPlayer && distance < nearestDistance)) {
                     nearest = candidate;
                     nearestDistance = distance;
                 }
             }
             // A small margin avoids flickering between enemies standing at almost the same distance.
             if (nearest != null && nearest != current && (current == null
-                    || !conditions.test(this, current) || nearestDistance < distanceToSqr(current) * 0.81D)) {
+                    || !conditions.test(this, current)
+                    || (nearest instanceof Player && !(current instanceof Player))
+                    || ((nearest instanceof Player) == (current instanceof Player)
+                        && nearestDistance < distanceToSqr(current) * 0.81D))) {
                 setTarget(nearest);
                 getNavigation().stop();
             }
