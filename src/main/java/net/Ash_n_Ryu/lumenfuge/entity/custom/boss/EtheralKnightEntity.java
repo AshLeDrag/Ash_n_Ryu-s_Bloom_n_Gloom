@@ -62,7 +62,7 @@ public class EtheralKnightEntity extends Monster {
         private float walkBlend;
         private float previousWalkBlend;
         private int attackCooldown;
-        private static final double MOVEMENT_SPEED = 0.08D;
+        private static final double MOVEMENT_SPEED = 0.12D;
         private static final double PHASE_ONE_DAMAGE = 9.0D;
         private static final double PHASE_TWO_DAMAGE = 18.0D;
         private static final double SLAM_RADIUS = 7.0D;
@@ -91,7 +91,7 @@ public class EtheralKnightEntity extends Monster {
         }
 
         private void stopAttack() {
-            if (isAttacking()) attackCooldown = 20;
+            if (isAttacking()) attackCooldown = 15;
             entityData.set(DATA_ATTACK, 0);
             entityData.set(DATA_ATTACK_TICKS, 0);
             attackTarget = null;
