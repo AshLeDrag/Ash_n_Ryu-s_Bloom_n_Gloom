@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "buttons",
+  "ingredients": [
+    {
+      "item": "lumenfuge:ernest_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumenfuge:ernest_button"
+  }
+}

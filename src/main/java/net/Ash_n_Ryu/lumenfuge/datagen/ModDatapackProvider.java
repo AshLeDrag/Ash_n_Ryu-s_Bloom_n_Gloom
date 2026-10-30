@@ -1,7 +1,6 @@
 package net.Ash_n_Ryu.lumenfuge.datagen;
 
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
-import net.Ash_n_Ryu.lumenfuge.enchantment.ModEnchantments;
 import net.Ash_n_Ryu.lumenfuge.worldgen.ModBiomeModifiers;
 import net.Ash_n_Ryu.lumenfuge.worldgen.ModBiomes;
 import net.Ash_n_Ryu.lumenfuge.worldgen.ModConfiguredFeatures;
@@ -18,7 +17,6 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 		public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-																				 .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
 																				 .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
 																				 .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
 																				 .add(Registries.BIOME, ModBiomes::bootstrap)

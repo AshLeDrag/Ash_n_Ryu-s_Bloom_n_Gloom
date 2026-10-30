@@ -30,6 +30,17 @@ sourceSets.main.resources {
 repositories {
 
     maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+
+    maven {
         url = 'https://maven.minecraftforge.net/'
     }
 }
@@ -116,16 +127,18 @@ neoForge {
 // a dependency that will be present for runtime testing but that is
 // "optional", meaning it will not be pulled by dependents of this mod.
 configurations {
+    localRuntime {
+        canBeConsumed = false
+        canBeResolved = false
+    }
     runtimeClasspath.extendsFrom localRuntime
 }
-
 dependencies {
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    // load the full JEI jar for development testing on NeoForge
+    localRuntime("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

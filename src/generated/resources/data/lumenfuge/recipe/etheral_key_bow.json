@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:goat_horn"
+    },
+    "H": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "G G",
+    "GHG",
+    "DND"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumenfuge:etheral_key_bow"
+  }
+}

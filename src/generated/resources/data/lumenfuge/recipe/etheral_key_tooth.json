@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:emerald"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IGI",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumenfuge:etheral_key_tooth"
+  }
+}

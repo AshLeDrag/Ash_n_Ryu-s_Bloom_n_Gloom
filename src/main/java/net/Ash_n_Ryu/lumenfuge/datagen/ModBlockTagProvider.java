@@ -42,6 +42,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 			
 			
 			
+			
 				
 			tag(BlockTags.LOGS_THAT_BURN)
 				 .add(ModBlocks.ERNEST_LOG.get())

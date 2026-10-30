@@ -17,11 +17,6 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_MANTISITE_TOOL = createTag("incorrect_for_mantisite_tool");
         
         
-        public static final TagKey<Block> BASIC_HAMMER_MINEABLE = createTag("hammer_mineable");
-        public static final TagKey<Block> PICKAXE_HAMMER_MINEABLE = createTag("pickaxe_hammer_mineable");
-        public static final TagKey<Block> SHOVEL_HAMMER_MINEABLE = createTag("shovel_hammer_mineable");
-        public static final TagKey<Block> AXE_HAMMER_MINEABLE = createTag("axe_hammer_mineable");
-        
         
 
         private static TagKey<Block> createTag(String name) {
@@ -30,8 +25,8 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> COLOSSAL_SWORD_ENCHANTABLE = createTag("colossal_enchantable");
-        public static final TagKey<Item> COMBINE_TO_ETHERAL = createTag("combine_to_etheral");
+        
+        public static final TagKey<Item> ERNEST_LOGS = createTag("ernest_logs");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Lumenfuge.MOD_ID, name));

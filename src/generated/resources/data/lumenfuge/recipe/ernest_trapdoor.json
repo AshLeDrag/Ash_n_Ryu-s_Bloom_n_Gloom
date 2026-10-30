@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "trapdoors",
+  "key": {
+    "#": {
+      "item": "lumenfuge:ernest_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "lumenfuge:ernest_trapdoor"
+  }
+}

@@ -22,7 +22,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		@Override
 		protected void addTags(HolderLookup.Provider provider) {
 				
-				tag(ModTags.Items.COLOSSAL_SWORD_ENCHANTABLE);
+				tag(ModTags.Items.ERNEST_LOGS)
+						.add(ModBlocks.ERNEST_LOG.get().asItem())
+						.add(ModBlocks.ERNEST_WOOD.get().asItem())
+						.add(ModBlocks.STRIPPED_ERNEST_LOG.get().asItem())
+						.add(ModBlocks.STRIPPED_ERNEST_WOOD.get().asItem());
 				
 				tag(ItemTags.SWORDS)
 						.add(ModItems.MANTISITE_SWORD.get());

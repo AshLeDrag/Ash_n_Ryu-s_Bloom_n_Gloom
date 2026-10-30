@@ -33,7 +33,15 @@
   "item.lumenfuge.mantisite_horse_armor": "Mantisite Horse Armor",
   "item.lumenfuge.arog_spawn_egg": "Arog Spawn Egg",
   "item.lumenfuge.zepi_spawn_egg": "Zepi Spawn Egg",
-  "entity.lumenfuge.etheral_knight": "§6Etheral Knight",
-  "tooltip.etheblock": "The Sumuning block for the etheral kgnight"
+  "item.lumenfuge.etheral_key": "Ethereal Key",
+  "item.lumenfuge.etheral_key_tooth": "Ethereal Key Tooth",
+  "item.lumenfuge.etheral_key_bow": "Ethereal Key Head",
+  "item.lumenfuge.etheral_key_blade": "Ethereal Key Blade",
+  "entity.lumenfuge.etheral_knight": "§6Ethereal Knight",
+  "tooltip.etheblock": "The Summoning block for the Ethereal knight",
+  "lumenfuge.djp1": "The Ethereal Knight is already in phase 1",
+  "lumenfuge.djp2": "The Ethereal Knight is already in phase 2",
+  "lumenfuge.phase": "The Ethereal Knight is now in phase",
+  "lumenfuge.0etheral": "There are no Ethereal Knights in a 64 block radius"
 
 }

@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_key_blade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lumenfuge:etheral_key_blade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_key_bow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lumenfuge:etheral_key_bow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_key_tooth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "lumenfuge:etheral_key_tooth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lumenfuge:etheral_key"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_key_bow",
+      "has_key_tooth",
+      "has_key_blade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lumenfuge:etheral_key"
+    ]
+  }
+}

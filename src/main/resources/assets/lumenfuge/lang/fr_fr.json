@@ -33,6 +33,15 @@
   "item.lumenfuge.mantisite_horse_armor": "Armure en Mantisite pour cheval",
   "item.lumenfuge.arog_spawn_egg": "Oeuf d'apparition d'Arog",
   "item.lumenfuge.zepi_spawn_egg": "Oeuf d'apparition de Zepi",
-  "entity.lumenfuge.etheral_knight": "§6Chevalier Éthéré"
+  "item.lumenfuge.etheral_key": "Clef de l'Éthéré",
+  "item.lumenfuge.etheral_key_tooth": "Crans de clef",
+  "item.lumenfuge.etheral_key_bow": "Tête de Clef",
+  "item.lumenfuge.etheral_key_blade": "Accueillage de Clef",
+  "entity.lumenfuge.etheral_knight": "§6Chevalier Éthéré",
+  "tooltip.etheblock": "The le block permettent de faire",
+  "lumenfuge.djp1": "Le Chevalier Éthéré est déja en phase 1",
+  "lumenfuge.djp2": "Le Chevalier Éthéré est déja en phase 2",
+  "lumenfuge.phase": "Le Chevalier Éthéré est désormais en phase",
+  "lumenfuge.0etheral": "Il n'y a aucun Chevalier Éthéré dans un rayon de 64 block"
 
 }

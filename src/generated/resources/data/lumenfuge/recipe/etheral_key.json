@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "lumenfuge:etheral_key_blade"
+    },
+    "H": {
+      "item": "lumenfuge:etheral_key_bow"
+    },
+    "T": {
+      "item": "lumenfuge:etheral_key_tooth"
+    }
+  },
+  "pattern": [
+    " H ",
+    "TBT",
+    "TBT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumenfuge:etheral_key"
+  }
+}

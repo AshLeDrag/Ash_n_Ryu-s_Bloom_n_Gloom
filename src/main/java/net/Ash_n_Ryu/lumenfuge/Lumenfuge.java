@@ -1,8 +1,6 @@
 package net.Ash_n_Ryu.lumenfuge;
 
 import net.Ash_n_Ryu.lumenfuge.block.ModBlocks;
-import net.Ash_n_Ryu.lumenfuge.component.ModDataComponents;
-import net.Ash_n_Ryu.lumenfuge.enchantment.ModEnchantmentEffects;
 import net.Ash_n_Ryu.lumenfuge.entity.ModEntities;
 import net.Ash_n_Ryu.lumenfuge.entity.client.ArogRenderer;
 import net.Ash_n_Ryu.lumenfuge.entity.client.EtheralKnightRenderer;
@@ -81,7 +79,6 @@ public class Lumenfuge {
         NeoForge.EVENT_BUS.register(this);
         
         ModArmorMaterials.register(modEventBus);
-        ModDataComponents.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModSounds.register(modEventBus);
         
@@ -89,7 +86,6 @@ public class Lumenfuge {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         
-        ModEnchantmentEffects.register(modEventBus);
         
         ModEntities.register(modEventBus);
 
