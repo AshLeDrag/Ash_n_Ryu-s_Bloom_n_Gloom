@@ -32,6 +32,8 @@
   "item.lumenfuge.mantisite_boots": "Mantisite Boots",
   "item.lumenfuge.mantisite_horse_armor": "Mantisite Horse Armor",
   "item.lumenfuge.arog_spawn_egg": "Arog Spawn Egg",
-  "item.lumenfuge.zepi_spawn_egg": "Zepi Spawn Egg"
+  "item.lumenfuge.zepi_spawn_egg": "Zepi Spawn Egg",
+  "entity.lumenfuge.etheral_knight": "§6Etheral Knight",
+  "tooltip.etheblock": "The Sumuning block for the etheral kgnight"
 
 }

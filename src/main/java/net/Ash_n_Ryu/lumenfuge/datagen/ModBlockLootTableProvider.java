@@ -28,6 +28,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.MANTISITE_BLOCK.get());
         
+        dropWhenSilkTouch(ModBlocks.USED_GLASS.get());
+        dropWhenSilkTouch(ModBlocks.USED_GLASS_PANE.get());
+        
         dropSelf(ModBlocks.ERNEST_LOG.get());
         dropSelf(ModBlocks.ERNEST_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_ERNEST_LOG.get());
@@ -67,12 +70,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                                          .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
     }
 
-    private void addFourVariantOreDrops(Block ore, Block deepslateOre, Block netherOre, Block endOre, Item rawOre) {
-        add(ore, block -> createOreDrop(ore, rawOre));
-        add(deepslateOre, block -> createMultipleOreDrops(deepslateOre, rawOre, 2, 5));
-        add(endOre, block -> createMultipleOreDrops(endOre, rawOre, 3, 6));
-        add(netherOre, block -> createMultipleOreDrops(netherOre, rawOre, 4, 8));
-    }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

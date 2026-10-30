@@ -1,17 +1,16 @@
 package net.Ash_n_Ryu.lumenfuge;
 
 import net.Ash_n_Ryu.lumenfuge.block.ModBlocks;
-import net.Ash_n_Ryu.lumenfuge.block.entity.ModBlockEntities;
 import net.Ash_n_Ryu.lumenfuge.component.ModDataComponents;
 import net.Ash_n_Ryu.lumenfuge.enchantment.ModEnchantmentEffects;
 import net.Ash_n_Ryu.lumenfuge.entity.ModEntities;
 import net.Ash_n_Ryu.lumenfuge.entity.client.ArogRenderer;
+import net.Ash_n_Ryu.lumenfuge.entity.client.EtheralKnightRenderer;
 import net.Ash_n_Ryu.lumenfuge.entity.client.ZepiRenderer;
 import net.Ash_n_Ryu.lumenfuge.item.ModArmorMaterials;
 import net.Ash_n_Ryu.lumenfuge.item.ModCreativeModeTabs;
 import net.Ash_n_Ryu.lumenfuge.item.ModItems;
 import net.Ash_n_Ryu.lumenfuge.sound.ModSounds;
-import net.Ash_n_Ryu.lumenfuge.util.ModItemProperties;
 import net.Ash_n_Ryu.lumenfuge.worldgen.ModTerraBlender;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
@@ -93,7 +92,7 @@ public class Lumenfuge {
         ModEnchantmentEffects.register(modEventBus);
         
         ModEntities.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
+
         
         ModTerraBlender.registerRegions();
         
@@ -129,6 +128,7 @@ public class Lumenfuge {
             
             EntityRenderers.register(ModEntities.AROG.get(), ArogRenderer::new);
             EntityRenderers.register(ModEntities.ZEPI.get(), ZepiRenderer::new);
+            EntityRenderers.register(ModEntities.EtheralKnight.get(), EtheralKnightRenderer::new);
         }
 
         @SubscribeEvent

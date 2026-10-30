@@ -30,8 +30,8 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> ESSENCE_TO_MANA = createTag("essence_to_mana");
         public static final TagKey<Item> COLOSSAL_SWORD_ENCHANTABLE = createTag("colossal_enchantable");
+        public static final TagKey<Item> COMBINE_TO_ETHERAL = createTag("combine_to_etheral");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Lumenfuge.MOD_ID, name));

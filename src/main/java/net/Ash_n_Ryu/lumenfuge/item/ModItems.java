@@ -26,6 +26,12 @@ public class ModItems {
 		
 		
 		
+		
+		public static final DeferredItem<Item> ETHERAL_KEY = ITEMS.register("etheral_key", () -> new Item(new Item.Properties()));
+		
+		
+		
+		
 		public static final DeferredItem<PickaxeItem> MANTISITE_PICKAXE = ITEMS.register("mantisite_pickaxe", () -> new PickaxeItem(ModToolTiers.MANTISITE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.MANTISITE, 1.0f, -2.8f))));
 		
 		public static final DeferredItem<AxeItem> MANTISITE_AXE = ITEMS.register("mantisite_axe", () -> new AxeItem(ModToolTiers.MANTISITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.MANTISITE, 6.0f, -3.2f))));

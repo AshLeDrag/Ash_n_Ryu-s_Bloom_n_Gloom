@@ -1,4 +1,38 @@
 {
 
-  "creativetab.lumenfuge": "Tools For Days"
+  "creativetab.lumenfuge": "Lumenfuge",
+
+  "block.lumenfuge.mantisite_block": "Block de Mantisite",
+  "block.lumenfuge.ernest_log": "Buche d'Ernest",
+  "block.lumenfuge.stripped_ernest_log": "Buche d'Ernest écorcée",
+  "block.lumenfuge.ernest_wood": "Bois d'Ernest",
+  "block.lumenfuge.stripped_ernest_wood": "Buche d'Ernest écorcée",
+  "block.lumenfuge.dead_ernest_leaves": "Feuille d'Ernest mortes",
+  "block.lumenfuge.ernest_leaves": "Feuille d'Ernest",
+  "block.lumenfuge.ernest_planks": "Planche d'Ernest",
+  "block.lumenfuge.ernest_stairs": "Escalier en Ernest",
+  "block.lumenfuge.ernest_slab": "Dalle en Ernest",
+  "block.lumenfuge.ernest_pressure_plate": "Plaque de pression en Ernest",
+  "block.lumenfuge.ernest_button": "Bouton en Ernest",
+  "block.lumenfuge.ernest_fence": "Barrière en Ernest",
+  "block.lumenfuge.ernest_fence_gate": "Portillon en Ernest",
+  "block.lumenfuge.ernest_door": "Porte en Ernest",
+  "block.lumenfuge.ernest_trapdoor": "Trap en Ernest",
+  "block.lumenfuge.ernest_sapling": "Pousse d'Ernest",
+  "block.lumenfuge.dead_ernest_sapling": "Pousse d'Ernest morte",
+  "item.lumenfuge.mantisite_shard": "Éclat de Mantisite",
+  "item.lumenfuge.mantisite_sword": "Epée en Mantisite",
+  "item.lumenfuge.mantisite_axe": "Hache en Mantisite",
+  "item.lumenfuge.mantisite_pickaxe": "Pioche en Mantisite",
+  "item.lumenfuge.mantisite_shovel": "Pelle en Mantisite",
+  "item.lumenfuge.mantisite_hoe": "Houe en Mantisite",
+  "item.lumenfuge.mantisite_helmet": "Casque en Mantisite",
+  "item.lumenfuge.mantisite_chestplate": "Plastron en Mantisite",
+  "item.lumenfuge.mantisite_leggings": "Jambière Mantisite",
+  "item.lumenfuge.mantisite_boots": "Bottes en Mantisite",
+  "item.lumenfuge.mantisite_horse_armor": "Armure en Mantisite pour cheval",
+  "item.lumenfuge.arog_spawn_egg": "Oeuf d'apparition d'Arog",
+  "item.lumenfuge.zepi_spawn_egg": "Oeuf d'apparition de Zepi",
+  "entity.lumenfuge.etheral_knight": "§6Chevalier Éthéré"
+
 }

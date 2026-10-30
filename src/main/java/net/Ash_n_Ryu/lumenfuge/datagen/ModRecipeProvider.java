@@ -20,7 +20,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		
 		@Override
 		protected void buildRecipes(RecipeOutput recipeOutput) {
-				
+				//ShapedRecipeBuilder.shaped()
 		
 		}
 		

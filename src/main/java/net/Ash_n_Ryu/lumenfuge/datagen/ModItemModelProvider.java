@@ -64,6 +64,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 				fenceItem(ModBlocks.ERNEST_FENCE, ModBlocks.ERNEST_PLANKS);
 				
 				basicItem(ModBlocks.ERNEST_DOOR.asItem());
+				withExistingParent("used_glass_pane", mcLoc("item/generated")).texture("layer0", modLoc("block/used_glass"));
 				
 				// Saplings
 				saplingItem(ModBlocks.ERNEST_SAPLING);

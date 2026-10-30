@@ -3,6 +3,7 @@ package net.Ash_n_Ryu.lumenfuge.entity;
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
 import net.Ash_n_Ryu.lumenfuge.entity.custom.ArogEntity;
 import net.Ash_n_Ryu.lumenfuge.entity.custom.ZepiEntity;
+import net.Ash_n_Ryu.lumenfuge.entity.custom.boss.EtheralKnightEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -21,6 +22,9 @@ public class ModEntities {
 	public static final Supplier<EntityType<ZepiEntity>> ZEPI =
 			ENTITY_TYPES.register("zepi", () ->  EntityType.Builder.of(ZepiEntity::new, MobCategory.CREATURE)
 					.sized( 10f/16f, 10f/16f).build("zepi"));
+	public static final Supplier<EntityType<EtheralKnightEntity>> EtheralKnight =
+			ENTITY_TYPES.register("etheral_knight", () ->  EntityType.Builder.of(EtheralKnightEntity::new, MobCategory.MONSTER)
+					.sized( 60f/16f, 73f/16f).build("etheral_knight"));
 
 	public static void register(IEventBus eventBus) {ENTITY_TYPES.register(eventBus);}
 }

@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "lumenfuge:block/etheral_knight_block"
+		},
+		"facing=south": {
+			"model": "lumenfuge:block/etheral_knight_block",
+			"y": 180
+		},
+		"facing=east": {
+			"model": "lumenfuge:block/etheral_knight_block",
+			"y": 90
+		},
+		"facing=west": {
+			"model": "lumenfuge:block/etheral_knight_block",
+			"y": 270
+		}
+	}
+}

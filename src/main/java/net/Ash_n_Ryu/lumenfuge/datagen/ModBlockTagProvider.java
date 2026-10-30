@@ -21,8 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 	protected void addTags(HolderLookup.Provider provider) {
 			tag(BlockTags.MINEABLE_WITH_PICKAXE)
 					.add(ModBlocks.MANTISITE_BLOCK.get());
-				
-				
+			
+			
 				
 			tag(BlockTags.NEEDS_DIAMOND_TOOL);
 			
