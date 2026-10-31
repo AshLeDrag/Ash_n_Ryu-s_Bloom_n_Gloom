@@ -1,10 +1,7 @@
 package net.Ash_n_Ryu.lumenfuge.datagen;
 
 import net.Ash_n_Ryu.lumenfuge.Lumenfuge;
-import net.Ash_n_Ryu.lumenfuge.worldgen.ModBiomeModifiers;
-import net.Ash_n_Ryu.lumenfuge.worldgen.ModBiomes;
-import net.Ash_n_Ryu.lumenfuge.worldgen.ModConfiguredFeatures;
-import net.Ash_n_Ryu.lumenfuge.worldgen.ModPlacedFeatures;
+import net.Ash_n_Ryu.lumenfuge.worldgen.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -20,7 +17,10 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 																				 .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
 																				 .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
 																				 .add(Registries.BIOME, ModBiomes::bootstrap)
-																				 .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+																				 .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+																				 .add(Registries.TEMPLATE_POOL, ModTemplatePools::bootstrap)
+																				 .add(Registries.STRUCTURE, ModStructures::bootstrap)
+																				 .add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap);
 		
 		public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 				super(output, registries, BUILDER, Set.of(Lumenfuge.MOD_ID));
