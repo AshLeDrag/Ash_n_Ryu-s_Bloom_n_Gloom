@@ -31,12 +31,7 @@ public class ModBlocks {
       
       public static final DeferredBlock<Block> MANTISITE_BLOCK = registerBlock("mantisite_block",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-      
-      
-      
-      public static final DeferredBlock<TransparentBlock> USED_GLASS = registerBlock("used_glass", () -> new TransparentBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn(Blocks::never).isRedstoneConductor(ModBlocks::never).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)));
-      
-      public static final DeferredBlock<IronBarsBlock> USED_GLASS_PANE = registerBlock("used_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
+
       
       
       public static final DeferredBlock<Block> ERNEST_LOG = registerBlock("ernest_log",

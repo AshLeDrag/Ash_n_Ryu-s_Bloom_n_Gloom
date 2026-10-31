@@ -28,9 +28,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.MANTISITE_BLOCK.get());
         
-        dropWhenSilkTouch(ModBlocks.USED_GLASS.get());
-        dropWhenSilkTouch(ModBlocks.USED_GLASS_PANE.get());
-        
         dropSelf(ModBlocks.ERNEST_LOG.get());
         dropSelf(ModBlocks.ERNEST_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_ERNEST_LOG.get());
