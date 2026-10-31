@@ -309,7 +309,7 @@ public class EtheralKnightPhase2Model<T extends EtheralKnightEntity> extends Hie
             float partialTick = Mth.clamp(ageInTicks - entity.tickCount, 0F, 1F);
             animate(entity.idleAnimationState, EtheralKnightPhase2Animations.baseline, ageInTicks);
             EtheralKnightPoseBlend.blend(root(), entity.getWalkBlend(partialTick), () ->
-                    animate(entity.walkAnimationState, EtheralKnightPhase2Animations.walk, ageInTicks, 2F));
+                    animate(entity.walkAnimationState, EtheralKnightPhase2Animations.walk, ageInTicks, 4F));
             if (entity.isAttacking()) {
                 var attack = switch (entity.getAttack()) {
                     case 2 -> EtheralKnightPhase2Animations.hit_hand2;

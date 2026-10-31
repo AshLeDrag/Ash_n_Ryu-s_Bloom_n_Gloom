@@ -339,7 +339,7 @@ public class EtheralKnightPhase1Model<T extends EtheralKnightEntity> extends Hie
             float partialTick = Mth.clamp(ageInTicks - entity.tickCount, 0F, 1F);
             animate(entity.idleAnimationState, EtheralKnightPhase1Animations.baseline, ageInTicks);
             EtheralKnightPoseBlend.blend(root(), entity.getWalkBlend(partialTick), () ->
-                    animate(entity.walkAnimationState, EtheralKnightPhase1Animations.walk, ageInTicks, 2F));
+                    animate(entity.walkAnimationState, EtheralKnightPhase1Animations.walk, ageInTicks, 4F));
             if (entity.isAttacking()) {
                 var attack = switch (entity.getAttack()) {
                     case 2 -> EtheralKnightPhase1Animations.hit_hand2;
@@ -353,8 +353,8 @@ public class EtheralKnightPhase1Model<T extends EtheralKnightEntity> extends Hie
                 applyHeadRotation(netHeadYaw, headPitch);
             }
         }
-
-        public ModelPart getHead() {
+		  
+		  public ModelPart getHead() {
 				return this.Head;
 		}
 		

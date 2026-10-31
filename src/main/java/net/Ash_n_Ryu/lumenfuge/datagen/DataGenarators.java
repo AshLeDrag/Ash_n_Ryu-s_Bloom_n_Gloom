@@ -36,8 +36,6 @@ public class DataGenarators {
         generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
         event.getGenerator().addProvider(event.includeServer(), new ModEnchantmentTagProvider(packOutput, lookupProvider, existingFileHelper));
         
-        generator.addProvider(event.includeServer(), new ModDataMapProvider(packOutput, lookupProvider));
-        
         
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));

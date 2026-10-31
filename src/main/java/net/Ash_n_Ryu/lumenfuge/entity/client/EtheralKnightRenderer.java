@@ -56,7 +56,7 @@ public class EtheralKnightRenderer extends EntityRenderer<EtheralKnightEntity> {
             BeaconRenderer.renderBeaconBeam(pose, buffers, BEAM_TEXTURE, partialTick, 1F,
                     entity.level().getGameTime(), 0,
                     Math.max(256, entity.level().getMaxBuildHeight() - entity.getBlockY()),
-                    0xFFB9EAFF, 4.2F * fade, 6F * fade);
+                    0xC3C857, 4.2F * fade, 6F * fade);
             pose.popPose();
         }
     }

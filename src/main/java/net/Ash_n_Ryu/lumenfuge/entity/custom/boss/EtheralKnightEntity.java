@@ -73,9 +73,11 @@ public class EtheralKnightEntity extends Monster {
 		private float previousWalkBlend;
 		private int attackCooldown;
 		private float combatYaw = Float.NaN;
-		private static final double MOVEMENT_SPEED = 0.12D;
+		private static final double MOVEMENT_SPEED = 0.19D;
 		private static final double PHASE_ONE_DAMAGE = 9.0D;
 		private static final double PHASE_TWO_DAMAGE = 18.0D;
+		private static final double PHASE_ONE_HEALTH = 500.0D;
+		private static final double PHASE_TWO_HEALTH = 1000.0D;
 		private static final double SLAM_RADIUS = 7.0D;
 		
 		private boolean isInStrikeRange(LivingEntity target) {
@@ -204,6 +206,7 @@ public class EtheralKnightEntity extends Monster {
 				nextAttack = 0;
 				entityData.set(DATA_PHASE, phase);
 				getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(phase == PHASE_TWO ? PHASE_TWO_DAMAGE : PHASE_ONE_DAMAGE);
+				getAttribute(Attributes.MAX_HEALTH).setBaseValue(phase == PHASE_TWO ? PHASE_TWO_HEALTH : PHASE_ONE_HEALTH);
 				entityData.set(DATA_PHASE_TICKS, 0);
 				bossEvent.setColor(phase == PHASE_TWO ? BossEvent.BossBarColor.PURPLE : BossEvent.BossBarColor.BLUE);
 				return true;

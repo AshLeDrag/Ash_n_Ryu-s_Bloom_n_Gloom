@@ -33,8 +33,8 @@ public class ModEvents {
 						return;
 				}
 				
-				event.setNearPlaneDistance(0.0F);
-				event.setFarPlaneDistance(40.0F);
+				event.setNearPlaneDistance(40.0F);
+				event.setFarPlaneDistance(100.0F);
 				event.setCanceled(true);
 		}
 }

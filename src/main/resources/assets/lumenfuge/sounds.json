@@ -56,5 +56,44 @@
       "lumenfuge:arog_step.05.grass5",
       "lumenfuge:arog_step.06.grass6"
     ]
+  },
+  "ethereal_ambient": {
+    "subtitle": "sounds.lumenfuge.ethereal_ambient",
+    "sounds": [
+      "lumenfuge:ethereal.01.ambient",
+      "lumenfuge:ethereal.02.ambient",
+      "lumenfuge:ethereal.03.ambient",
+      "lumenfuge:ethereal.05.ambient",
+      "lumenfuge:ethereal.06.ambient"
+    ]
+  },
+  "ethereal_attack": {
+    "subtitle": "sounds.lumenfuge.ethereal_attack",
+    "sounds": [
+      "lumenfuge:ethereal.07.attack",
+      "lumenfuge:ethereal.08.attack"
+    ]
+  },
+  "ethereal_transition": {
+    "subtitle": "sounds.lumenfuge.ethereal_transition",
+    "sounds": [
+      "lumenfuge:ethereal.06.transition"
+    ]
+  },
+  "ethereal_hurt": {
+    "subtitle": "sounds.lumenfuge.ethereal_hurt",
+    "sounds": [
+      "lumenfuge:ethereal.09.hurt",
+      "lumenfuge:ethereal.10.hurt",
+      "lumenfuge:ethereal.11.hurt",
+      "lumenfuge:ethereal.12.hurt",
+      "lumenfuge:ethereal.13.hurt",
+      "lumenfuge:ethereal.14.hurt",
+      "lumenfuge:ethereal.15.hurt",
+      "lumenfuge:ethereal.16.hurt",
+      "lumenfuge:ethereal.17.hurt",
+      "lumenfuge:ethereal.18.hurt",
+      "lumenfuge:ethereal.19.hurt"
+    ]
   }
 }

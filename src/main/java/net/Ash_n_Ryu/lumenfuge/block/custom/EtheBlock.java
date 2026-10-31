@@ -124,7 +124,6 @@ public class EtheBlock extends HorizontalDirectionalBlock {
                 double distance = Math.sqrt(dx * dx + dz * dz);
                 if (distance > 8) continue;
                 if (distance < 0.001) {
-                    // A player directly above the altar still needs an outward direction.
                     dx = -nearby.getLookAngle().x;
                     dz = -nearby.getLookAngle().z;
                     distance = Math.sqrt(dx * dx + dz * dz);
