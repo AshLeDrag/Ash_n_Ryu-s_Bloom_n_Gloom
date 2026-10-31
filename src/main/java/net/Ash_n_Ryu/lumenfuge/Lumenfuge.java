@@ -141,26 +141,3 @@ public class Lumenfuge {
 
     }
 }
-
-
-// TODO: faire des sons pour les mob
-// TODO:
-// TODO:
-// TODO:
-// TODO:
-// TODO: nommer/translate les trucs du mod
-// TODO:
-// TODO:
-// TODO:
-// TODO:
-// TODO: finir l'arène du boss
-// TODO: créer la structure du boss
-// TODO: modéliser le boss final
-// TODO: modéliser le blob
-// TODO:
-// TODO: faire un autel pour réveiller le boss final avec la clé du blob
-// TODO: créer la récompense du boss
-// TODO: créer une arme spéciale (juste pour le kiff, et peut-être en faire l'arme du boss)
-// TODO:
-// TODO:
-// TODO: icône pour le mod

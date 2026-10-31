@@ -32,7 +32,7 @@ public class ModStructures {
 						HolderSet.direct(biomes.getOrThrow(ModBiomes.BLOOM_GLOOM))
 				)
 											.generationStep(GenerationStep.Decoration.SURFACE_STRUCTURES)
-											.terrainAdapation(TerrainAdjustment.BEARD_THIN)
+											.terrainAdapation(TerrainAdjustment.BEARD_BOX)
 											.build();
 				
 				context.register(Ethereal_Arena, new JigsawStructure(
