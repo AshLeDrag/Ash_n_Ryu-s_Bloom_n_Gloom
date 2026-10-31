@@ -23,14 +23,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 					.add(ModBlocks.MANTISITE_BLOCK.get());
 			
 			
-				
-			tag(BlockTags.NEEDS_DIAMOND_TOOL);
+			
 			
 			tag(BlockTags.FENCES).add(ModBlocks.ERNEST_FENCE.get());
 			tag(BlockTags.FENCE_GATES).add(ModBlocks.ERNEST_FENCE_GATE.get());
 				
 					
-			tag(BlockTags.NEEDS_IRON_TOOL)
+			tag(BlockTags.NEEDS_DIAMOND_TOOL)
 					.add(ModBlocks.MANTISITE_BLOCK.get());
 				
 			tag(ModTags.Blocks.NEEDS_MANTISITE_TOOL)

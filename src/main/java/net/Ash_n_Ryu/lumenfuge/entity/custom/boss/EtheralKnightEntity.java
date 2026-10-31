@@ -1,6 +1,8 @@
 package net.Ash_n_Ryu.lumenfuge.entity.custom.boss;
 
+import net.Ash_n_Ryu.lumenfuge.block.ModBlocks;
 import net.Ash_n_Ryu.lumenfuge.item.ModItems;
+import net.Ash_n_Ryu.lumenfuge.sound.ModSounds;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -237,6 +239,7 @@ public class EtheralKnightEntity extends Monster {
 				attackTarget = living;
 				entityData.set(DATA_ATTACK_TICKS, 0);
 				entityData.set(DATA_ATTACK, 1 + nextAttack++ % (getPhase() == PHASE_TWO ? 3 : 2));
+				this.playSound(this.getAttackSound(), 1.0F, 1.0F);
 				getNavigation().stop();
 				return true;
 		}
@@ -252,6 +255,7 @@ public class EtheralKnightEntity extends Monster {
 				setDeltaMovement(0, getDeltaMovement().y, 0);
 				int elapsed = getPhaseTicks() + 1;
 				entityData.set(DATA_PHASE_TICKS, elapsed);
+				this.playSound(this.getTransitionSound(), 1.0F, 1.0F);
 				int duration = switch (getPhase()) {
 						case PHASE_ONE_END -> PHASE_ONE_END_TICKS;
 						case ARMOR_BREAK -> ARMOR_BREAK_TICKS;
@@ -456,15 +460,23 @@ public class EtheralKnightEntity extends Monster {
 		}
 		
 		protected SoundEvent getAmbientSound() {
-				return SoundEvents.WITHER_AMBIENT;
+				return ModSounds.ETHEREAL_AMBIENT.get();
 		}
 		
 		protected SoundEvent getHurtSound(DamageSource damageSource) {
-				return SoundEvents.WITHER_HURT;
+				return ModSounds.ETHEREAL_HURT.get();
 		}
 		
 		protected SoundEvent getDeathSound() {
-				return SoundEvents.WITHER_DEATH;
+				return ModSounds.ETHEREAL_DEATH.get();
+		}
+		
+		protected SoundEvent getTransitionSound() {
+				return ModSounds.ETHEREAL_TRANSITION.get();
+		}
+		
+		protected SoundEvent getAttackSound() {
+				return ModSounds.ETHEREAL_ATTACK.get();
 		}
 		
 		@Override
@@ -550,9 +562,15 @@ public class EtheralKnightEntity extends Monster {
 		
 		protected void dropCustomDeathLoot(ServerLevel level, DamageSource damageSource, boolean recentlyHit) {
 				super.dropCustomDeathLoot(level, damageSource, recentlyHit);
-				ItemEntity itementity = this.spawnAtLocation(new ItemStack(ModItems.MANTISITE_SHARD.get(), 7));
-				if (itementity != null) {
-						itementity.setExtendedLifetime();
+				int nbrM = random.nextInt(6)+5;
+				int nbrS = random.nextInt(2)+3;
+				ItemEntity itementityM = this.spawnAtLocation(new ItemStack(ModItems.MANTISITE_SHARD.get(), nbrM));
+				ItemEntity itementityS = this.spawnAtLocation(new ItemStack(ModBlocks.ERNEST_SAPLING.get(), nbrS));
+				if (itementityM != null) {
+						itementityM.setExtendedLifetime();
+				}
+				if (itementityS != null) {
+						itementityS.setExtendedLifetime();
 				}
 				
 		}

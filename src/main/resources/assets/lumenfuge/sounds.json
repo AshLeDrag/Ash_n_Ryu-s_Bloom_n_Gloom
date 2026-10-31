@@ -80,6 +80,12 @@
       "lumenfuge:ethereal.06.transition"
     ]
   },
+  "ethereal_death": {
+    "subtitle": "sounds.lumenfuge.ethereal_death",
+    "sounds": [
+      "lumenfuge:ethereal.20.death"
+    ]
+  },
   "ethereal_hurt": {
     "subtitle": "sounds.lumenfuge.ethereal_hurt",
     "sounds": [

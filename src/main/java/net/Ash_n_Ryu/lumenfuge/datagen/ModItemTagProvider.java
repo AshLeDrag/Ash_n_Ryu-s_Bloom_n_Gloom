@@ -43,8 +43,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 				tag(ItemTags.HOES)
 						.add(ModItems.MANTISITE_HOE.get());
 				
-				tag(ItemTags.TRIDENT_ENCHANTABLE);
-				
 				tag(ItemTags.TRIMMABLE_ARMOR)
 						.add(ModItems.MANTISITE_HELMET.get())
 						.add(ModItems.MANTISITE_CHESTPLATE.get())

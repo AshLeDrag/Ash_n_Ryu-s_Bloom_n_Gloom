@@ -26,6 +26,13 @@ public class ModSounds {
 		public static final Supplier<SoundEvent> AROG_DEATH = registerSoundEvent("arog_death");
 		
 		
+		public static final Supplier<SoundEvent> ETHEREAL_AMBIENT = registerSoundEvent("ethereal_ambient");
+		public static final Supplier<SoundEvent> ETHEREAL_HURT = registerSoundEvent("ethereal_hurt");
+		public static final Supplier<SoundEvent> ETHEREAL_TRANSITION = registerSoundEvent("ethereal_transition");
+		public static final Supplier<SoundEvent> ETHEREAL_ATTACK = registerSoundEvent("ethereal_attack");
+		public static final Supplier<SoundEvent> ETHEREAL_DEATH = registerSoundEvent("ethereal_death");
+		
+		
 		private static Supplier<SoundEvent> registerSoundEvent(String name) {
 				ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Lumenfuge.MOD_ID, name);
 				return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
