@@ -1,32 +1,60 @@
 {
-  "mana_block_break": {
-    "subtitle": "sounds.thingsfordays.mana_block_break",
+  "zepi": {
+    "subtitle": "sounds.lumenfuge.zepi",
     "sounds": [
-      "thingsfordays:mana_block_break"
+      "lumenfuge:zepi"
     ]
   },
-  "mana_block_step": {
-    "subtitle": "sounds.thingsfordays.mana_block_step",
+  "zepi_hurt": {
+    "subtitle": "sounds.lumenfuge.zepi_hurt",
     "sounds": [
-      "thingsfordays:mana_block_step"
+      "lumenfuge:zepi_hurt"
     ]
   },
-  "mana_block_place": {
-    "subtitle": "sounds.thingsfordays.mana_block_place",
+  "zepi_death": {
+    "subtitle": "sounds.lumenfuge.zepi_death",
     "sounds": [
-      "thingsfordays:mana_block_place"
+      "lumenfuge:zepi_death"
     ]
   },
-  "mana_block_hit": {
-    "subtitle": "sounds.thingsfordays.mana_block_hit",
+  "zepi_step": {
+    "subtitle": "sounds.lumenfuge.zepi_step",
     "sounds": [
-      "thingsfordays:mana_block_hit"
+      "lumenfuge:zepi_step.01.grass1",
+      "lumenfuge:zepi_step.02.grass2",
+      "lumenfuge:zepi_step.03.grass3",
+      "lumenfuge:zepi_step.04.grass4",
+      "lumenfuge:zepi_step.05.grass5",
+      "lumenfuge:zepi_step.06.grass6"
     ]
   },
-  "mana_block_fall": {
-    "subtitle": "sounds.thingsfordays.mana_block_fall",
+  "arog": {
+    "subtitle": "sounds.lumenfuge.arog",
     "sounds": [
-      "thingsfordays:mana_block_fall"
+      "lumenfuge:arog"
+    ]
+  },
+  "arog_hurt": {
+    "subtitle": "sounds.lumenfuge.arog_hurt",
+    "sounds": [
+      "lumenfuge:arog_hurt"
+    ]
+  },
+  "arog_death": {
+    "subtitle": "sounds.lumenfuge.arog_death",
+    "sounds": [
+      "lumenfuge:arog_death"
+    ]
+  },
+  "arog_step": {
+    "subtitle": "sounds.lumenfuge.arog_step",
+    "sounds": [
+      "lumenfuge:arog_step.01.grass1",
+      "lumenfuge:arog_step.02.grass2",
+      "lumenfuge:arog_step.03.grass3",
+      "lumenfuge:arog_step.04.grass4",
+      "lumenfuge:arog_step.05.grass5",
+      "lumenfuge:arog_step.06.grass6"
     ]
   }
 }

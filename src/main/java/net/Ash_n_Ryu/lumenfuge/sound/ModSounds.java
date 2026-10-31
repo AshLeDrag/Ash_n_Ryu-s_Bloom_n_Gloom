@@ -16,15 +16,14 @@ public class ModSounds {
 		public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
 				DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, Lumenfuge.MOD_ID);
 		
-		public static final Supplier<SoundEvent> MANA_BLOCK_BREAK = registerSoundEvent("mana_block_break");
-		public static final Supplier<SoundEvent> MANA_BLOCK_STEP = registerSoundEvent("mana_block_step");
-		public static final Supplier<SoundEvent> MANA_BLOCK_PLACE = registerSoundEvent("mana_block_place");
-		public static final Supplier<SoundEvent> MANA_BLOCK_HIT = registerSoundEvent("mana_block_hit");
-		public static final Supplier<SoundEvent> MANA_BLOCK_FALL = registerSoundEvent("mana_block_fall");
-		
-		public static final DeferredSoundType MANA_BLOCK_SOUNDS = new DeferredSoundType(1f, 1f,
-				ModSounds.MANA_BLOCK_BREAK, ModSounds.MANA_BLOCK_STEP, ModSounds.MANA_BLOCK_PLACE,
-				ModSounds.MANA_BLOCK_HIT, ModSounds.MANA_BLOCK_FALL);
+		public static final Supplier<SoundEvent> ZEPI_NORMAL = registerSoundEvent("zepi");
+		public static final Supplier<SoundEvent> ZEPI_HURT = registerSoundEvent("zepi_hurt");
+		public static final Supplier<SoundEvent> ZEPI_STEP = registerSoundEvent("zepi_step");
+		public static final Supplier<SoundEvent> ZEPI_DEATH = registerSoundEvent("zepi_death");
+		public static final Supplier<SoundEvent> AROG_NORMAL = registerSoundEvent("arog");
+		public static final Supplier<SoundEvent> AROG_HURT = registerSoundEvent("arog_hurt");
+		public static final Supplier<SoundEvent> AROG_STEP = registerSoundEvent("arog_step");
+		public static final Supplier<SoundEvent> AROG_DEATH = registerSoundEvent("arog_death");
 		
 		
 		private static Supplier<SoundEvent> registerSoundEvent(String name) {

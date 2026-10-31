@@ -1,11 +1,16 @@
 package net.Ash_n_Ryu.lumenfuge.entity.custom;
 
 import net.Ash_n_Ryu.lumenfuge.item.ModItems;
+import net.Ash_n_Ryu.lumenfuge.sound.ModSounds;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -18,6 +23,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
@@ -111,5 +117,25 @@ public class ZepiEntity extends Animal implements NeutralMob {
     public void setPersistentAngerTarget(@javax.annotation.Nullable UUID target) {
         this.persistentAngerTarget = target;
     }
+    
+    
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.ZEPI_NORMAL.get();
+    }
+    
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return ModSounds.ZEPI_HURT.get();
+    }
+    
+    
+    
+    protected SoundEvent getDeathSound() {
+        return ModSounds.ZEPI_DEATH.get();
+    }
+    
+    protected void playStepSound(BlockPos pos, BlockState block) {
+        this.playSound(ModSounds.ZEPI_STEP.get(), 0.15F, 1.0F);
+    }
+    
 
 }
