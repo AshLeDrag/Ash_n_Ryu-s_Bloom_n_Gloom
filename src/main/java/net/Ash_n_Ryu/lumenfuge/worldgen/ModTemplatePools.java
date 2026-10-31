@@ -20,7 +20,7 @@ public class ModTemplatePools {
         var pools = context.lookup(Registries.TEMPLATE_POOL);
         context.register(ETHEREAL_ARENA, new StructureTemplatePool(
                 pools.getOrThrow(Pools.EMPTY),
-                List.of(Pair.of(StructurePoolElement.single(Lumenfuge.MOD_ID + ":etheral_arena"), 1)),
+                List.of(Pair.of(StructurePoolElement.single(Lumenfuge.MOD_ID + ":ethereal_arena"), 1)),
                 StructureTemplatePool.Projection.RIGID));
     }
 }
