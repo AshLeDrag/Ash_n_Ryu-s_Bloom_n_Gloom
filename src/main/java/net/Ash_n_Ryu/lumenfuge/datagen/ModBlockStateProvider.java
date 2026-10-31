@@ -52,11 +52,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			doorBlockWithRenderType(ModBlocks.ERNEST_DOOR.get(), modLoc("block/ernest_door_bottom"), modLoc("block/ernest_door_top"), "cutout");
 			trapdoorBlockWithRenderType(ModBlocks.ERNEST_TRAPDOOR.get(), modLoc("block/ernest_trapdoor"), true, "cutout");
 			
-			simpleBlockWithItem(ModBlocks.USED_GLASS.get(), models().cubeAll("used_glass", blockTexture(ModBlocks.USED_GLASS.get())).renderType("translucent"));
-			paneBlockWithRenderType(ModBlocks.USED_GLASS_PANE.get(), modLoc("block/used_glass"), modLoc("block/used_glass_pane"), "translucent");
-			
-			
-			
 			blockItem(ModBlocks.EtheBlock);
 			blockItem(ModBlocks.ERNEST_STAIRS);
 			blockItem(ModBlocks.ERNEST_SLAB);
